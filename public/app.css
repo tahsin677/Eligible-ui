@@ -632,5 +632,4 @@ i.ico{width:auto!important;height:auto!important;font-size:20px;line-height:1;di
 .logo-tile img{padding:12px!important;transform:none}
 
 /* workspace switcher without a logo tile */
-.ws{padding:10px 16px}
-.app.collapsed .ws{display:none}
+.ws{padding:10px 14px}
