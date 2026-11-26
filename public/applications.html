@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applications | Eligible</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html" aria-current="page"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>Applications</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t"><div><h1>Applications</h1></div></div>
+  <div class="sp"></div>
+  <button class="pbtn" data-newjob><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
+ </div>
+ <div class="pg">
+
+  <div class="filters2">
+   <label class="field"><i class="hgi hgi-stroke hgi-search-01 ico" style="font-size:19px"></i><span class="sr">Search name or email</span><input id="q" type="search" placeholder="Search name or email" autocomplete="off"></label>
+   <select class="sel" id="fj" aria-label="Job"><option value="">All jobs</option><option>Sales Executive</option><option>Product Designer</option><option>Frontend Developer</option><option>Customer Success Manager</option><option>Marketing Lead</option><option>Data Analyst</option></select>
+   <select class="sel" id="fs" aria-label="Stage"><option value="">All stages</option><option>Applied</option><option>Interviewed</option><option>Shortlisted</option><option>Rejected</option></select>
+   <span class="sp"></span>
+   <select class="sel" id="so" aria-label="Sort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="score">Highest score</option></select>
+  </div>
+  <div class="tbl" style="--cols:2.2fr 1.4fr 1.7fr 1fr 1fr">
+   <div class="t-head"><span>Candidate</span><span>Role</span><span>AI interview</span><span>Stage</span><span>Applied</span></div>
+   <div id="rows"></div>
+  </div>
+  <p class="cnt" id="cnt"></p>
+ </div>
+</main>
+</div>
+<button class="fab" id="fab" aria-label="Ask Eligible"><span class="fi"><img src="eligible-icon.png" alt=""></span>Ask Eligible</button>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function toast(m){let t=$("#toast");if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t)}t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400)}
+$$("[data-newjob]").forEach(b=>b.onclick=()=>toast("The new job flow isn't built yet"));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+</script>
+<script>
+const A=[
+ {n:"Shakeel",e:"shakeel@vector3.agency",r:"Sales Executive",s:0,m:"0/2",st:"Applied",d:"26 Nov 2026",ts:20261126,p:"candidate.png",real:1},
+ {n:"Daniel Foster",e:"daniel.foster@mail.com",r:"Frontend Developer",s:82,m:"3/3",st:"Shortlisted",d:"25 Nov 2026",ts:20261125,p:"people/men-32.jpg"},
+ {n:"Priya Nair",e:"priya.nair@mail.com",r:"Product Designer",s:76,m:"2/2",st:"Interviewed",d:"24 Nov 2026",ts:20261124,p:"people/women-44.jpg"},
+ {n:"Marcus Reed",e:"marcus.reed@mail.com",r:"Data Analyst",s:58,m:"1/2",st:"Interviewed",d:"23 Nov 2026",ts:20261123,p:"people/men-75.jpg"},
+ {n:"Sofia Alvarez",e:"sofia.alvarez@mail.com",r:"Customer Success Manager",s:91,m:"3/3",st:"Shortlisted",d:"22 Nov 2026",ts:20261122,p:"people/women-65.jpg"},
+ {n:"Omar Haddad",e:"omar.haddad@mail.com",r:"Frontend Developer",s:34,m:"1/3",st:"Rejected",d:"21 Nov 2026",ts:20261121,p:"people/men-46.jpg"},
+ {n:"Hannah Lindqvist",e:"hannah.l@mail.com",r:"Product Designer",s:null,m:"",st:"Applied",d:"20 Nov 2026",ts:20261120,p:"people/women-26.jpg"},
+ {n:"Kevin O'Brien",e:"kevin.obrien@mail.com",r:"Sales Executive",s:67,m:"2/2",st:"Interviewed",d:"19 Nov 2026",ts:20261119,p:"people/men-12.jpg"},
+ {n:"Aisha Rahman",e:"aisha.rahman@mail.com",r:"Marketing Lead",s:88,m:"2/2",st:"Shortlisted",d:"17 Nov 2026",ts:20261117,p:"people/women-90.jpg"}
+];
+const SC={Applied:"applied",Interviewed:"fin",Shortlisted:"open",Rejected:"red"};
+const col=s=>s>=70?"#12a05a":s>=40?"#1b6ee8":"#d6304a";
+function draw(){
+ const q=$("#q").value.trim().toLowerCase(),j=$("#fj").value,s=$("#fs").value,o=$("#so").value;
+ let L=A.filter(a=>(!q||(a.n+" "+a.e).toLowerCase().includes(q))&&(!j||a.r===j)&&(!s||a.st===s));
+ L.sort((a,b)=>o==="old"?a.ts-b.ts:o==="score"?(b.s??-1)-(a.s??-1):b.ts-a.ts);
+ $("#rows").innerHTML=L.length?L.map(a=>{
+  const inner=`<div class="who"><img src="${a.p}" alt="${esc(a.n)}"><div><b>${esc(a.n)}</b><small>${esc(a.e)}</small></div></div><span><span class="role-chip">${esc(a.r)}</span></span>
+  <div>${a.s===null?`<small style="color:var(--faint);font-size:13.5px">Not interviewed yet</small>`:`<div class="scorecell"><b>${a.s}</b><span class="sbar"><i style="width:${a.s}%;background:${col(a.s)}"></i></span></div><small class="${a.s<40?"sub-red":""}" style="font-size:13px;color:${a.s<40?"":"var(--mute)"}">Must-haves ${a.m}</small>`}</div>
+  <span><span class="st ${SC[a.st]}"><i></i>${a.st}</span></span><small style="color:var(--mute);font-size:14px">${a.d}</small>`;
+  return a.real?`<a class="t-row" href="index.html">${inner}</a>`:`<div class="t-row hov" data-demo="${esc(a.n)}" tabindex="0" role="button">${inner}</div>`}).join(""):`<div class="t-empty">No applicants match these filters.</div>`;
+ $("#cnt").textContent=L.length+" applicant"+(L.length===1?"":"s");
+}
+$("#rows").addEventListener("click",e=>{const r=e.target.closest("[data-demo]");if(r)toast(r.dataset.demo+"'s interview isn't part of this demo")});
+["#q","#fj","#fs","#so"].forEach(s=>$(s).addEventListener("input",draw));
+draw();
+</script>
+<script src="shell.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

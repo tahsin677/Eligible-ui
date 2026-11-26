@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs | Eligible</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html" aria-current="page"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>Jobs</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t"><div><h1>Jobs</h1></div></div>
+  <div class="sp"></div>
+  <button class="pbtn" data-newjob><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
+ </div>
+ <div class="pg">
+
+  <div class="jtabs" id="jt" role="tablist" aria-label="Filter jobs"></div>
+  <div class="tbl" style="--cols:2.6fr .9fr 1fr 2.3fr" id="jobTbl">
+   <div class="t-head"><span>Job</span><span>Applicants</span><span>Status</span><span style="text-align:right">Actions</span></div>
+   <div id="jobRows"></div>
+  </div>
+ </div>
+</main>
+</div>
+<button class="fab" id="fab" aria-label="Ask Eligible"><span class="fi"><img src="eligible-icon.png" alt=""></span>Ask Eligible</button>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function toast(m){let t=$("#toast");if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t)}t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400)}
+$$("[data-newjob]").forEach(b=>b.onclick=()=>toast("The new job flow isn't built yet"));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+</script>
+<script>
+const J=[
+ {t:"Sales Executive",m:"Sales",loc:"Gulshan Badda Ink Road",n:1,s:"open",i:"briefcase-01",c:"b",d:"Posted 26 Nov"},
+ {t:"Product Designer",m:"Design",loc:"Remote",n:14,s:"open",i:"paint-board",c:"p",d:"Posted 21 Nov"},
+ {t:"Frontend Developer",m:"Engineering",loc:"Dhaka · Hybrid",n:23,s:"open",i:"source-code",c:"g",d:"Posted 18 Nov"},
+ {t:"Customer Success Manager",m:"Support",loc:"Dhaka",n:8,s:"paused",i:"customer-support",c:"o",d:"Posted 9 Nov"},
+ {t:"Marketing Lead",m:"Marketing",loc:"Remote",n:31,s:"closed",i:"megaphone-01",c:"r",d:"Posted 28 Oct"},
+ {t:"Data Analyst",m:"Data",loc:"Dhaka · On site",n:5,s:"open",i:"analytics-01",c:"t",d:"Posted 24 Nov"}
+];
+const ST={open:["Open","open"],paused:["Paused","paused"],closed:["Closed","closed"]};
+let armed=-1,flt="all";
+function tabs(){
+ const cnt=k=>k==="all"?J.length:J.filter(j=>j.s===k).length;
+ $("#jt").innerHTML=[["all","All"],["open","Open"],["paused","Paused"],["closed","Closed"]].map(([k,l])=>`<button role="tab" aria-selected="${flt===k}" data-f="${k}">${l}<b>${cnt(k)}</b></button>`).join("");
+}
+function draw(){
+ tabs();
+ const L=J.map((j,i)=>({j,i})).filter(o=>flt==="all"||o.j.s===flt);
+ $("#jobRows").innerHTML=L.length?L.map(({j,i})=>`<div class="t-row hov"><div class="who"><span class="jic ${j.c}"><i class="hgi hgi-stroke hgi-${j.i} ico" style="font-size:24px"></i></span><div><b>${esc(j.t)}</b><small>${esc(j.m)} · ${esc(j.loc)}</small></div></div>
+ <div class="appn"><i class="hgi hgi-stroke hgi-user-multiple ico" style="font-size:19px"></i><b>${j.n}</b></div><span><span class="st ${ST[j.s][1]}"><i></i>${ST[j.s][0]}</span></span>
+ <div class="acts"><button class="ib2" data-a="copy" data-i="${i}" aria-label="Copy application link" title="Copy application link"><i class="hgi hgi-stroke hgi-copy-01 ico" style="font-size:20px"></i></button><button class="ib2" data-a="open" data-i="${i}" aria-label="Open application page" title="Open application page"><i class="hgi hgi-stroke hgi-link-square-02 ico" style="font-size:20px"></i></button>
+ <button class="bk" data-a="pause" data-i="${i}" ${j.s==="closed"?"disabled style='opacity:.4;cursor:default'":""}><i class="hgi hgi-stroke hgi-${j.s==="paused"?"play":"pause"} ico" style="font-size:16px"></i>${j.s==="paused"?"Resume":"Pause"}</button><button class="bk plain" data-a="close" data-i="${i}">${j.s==="closed"?"Reopen":"Close"}</button>
+ <button class="bk red" data-a="del" data-i="${i}"><i class="hgi hgi-stroke hgi-delete-02 ico" style="font-size:18px"></i>${armed===i?"Confirm delete":"Delete"}</button></div></div>`).join(""):`<div class="t-empty">No ${flt==="all"?"":flt+" "}jobs to show.</div>`;
+}
+$("#jt").addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(b){flt=b.dataset.f;armed=-1;draw()}});
+$("#jobRows").addEventListener("click",e=>{
+ const b=e.target.closest("[data-a]");if(!b)return;const i=+b.dataset.i,j=J[i],a=b.dataset.a;
+ if(a!=="del")armed=-1;
+ if(a==="copy"){try{navigator.clipboard.writeText(location.origin+"/apply/"+j.t.toLowerCase().replace(/ /g,"-"))}catch(x){}toast("Application link copied")}
+ else if(a==="open")toast("Opens the public application page")
+ else if(a==="pause"){j.s=j.s==="paused"?"open":"paused";toast(j.s==="paused"?"Job paused":"Job is open again")}
+ else if(a==="close"){j.s=j.s==="closed"?"open":"closed";toast(j.s==="closed"?"Job closed":"Job reopened")}
+ else if(a==="del"){if(armed===i){J.splice(i,1);armed=-1;toast("Job deleted")}else{armed=i;setTimeout(()=>{if(armed===i){armed=-1;draw()}},3500)}}
+ draw();
+});
+draw();
+</script>
+<script src="shell.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

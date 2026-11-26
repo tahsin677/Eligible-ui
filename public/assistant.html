@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI assistant | Eligible</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html" aria-current="page"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>AI assistant</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t"><div><h1>AI assistant</h1></div></div>
+  <div class="sp"></div>
+  <button class="pbtn" data-newjob><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
+ </div>
+ <div class="pg">
+
+  <div class="chatpg">
+   <aside class="cp-side"><h3>Your conversations</h3>
+    <button class="cp-new" id="nc"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i>New conversation</button>
+    <div class="cp-list" id="cl"><button class="cp-item on"><i class="hgi hgi-stroke hgi-message-01 ico" style="font-size:18px"></i><span>Help me create a new job…</span></button></div>
+    <div class="cp-foot"><img src="eligible-icon.png" alt=""><span>From a thought<br>to your next hire.</span></div>
+   </aside>
+   <section class="cp-main">
+    <header class="cp-head"><img src="eligible-icon.png" alt=""><div><b>Eligible assistant</b><small>AI for your workspace</small></div><span class="org">Vector3 LLC</span></header>
+    <div class="cp-body" id="cb">
+     <div class="cp-empty" id="em">
+      <div class="cp-art" aria-hidden="true"><span class="back2"></span><span class="sheet"><i></i><i></i><i style="width:60%"></i></span><img src="eligible-icon.png" alt=""></div>
+      <h2>What are we hiring for?</h2>
+      <p>Tell me about the person you need. We'll shape<br>the role, write the questions, and get your job ready.</p>
+      <div class="cp-chips"><button class="cp-chip" data-p="Help me create a job for a Sales Executive"><i class="hgi hgi-stroke hgi-briefcase-01 ico" style="font-size:18px"></i>Create a job<i class="hgi hgi-stroke hgi-arrow-up-right-01 ico" style="font-size:15px"></i></button><button class="cp-chip" data-p="Build an interview for my open role"><i class="hgi hgi-stroke hgi-file-01 ico" style="font-size:18px"></i>Build an interview<i class="hgi hgi-stroke hgi-arrow-up-right-01 ico" style="font-size:15px"></i></button><button class="cp-chip" data-p="Catch me up on my hiring"><i class="hgi hgi-stroke hgi-message-01 ico" style="font-size:18px"></i>Catch me up<i class="hgi hgi-stroke hgi-arrow-up-right-01 ico" style="font-size:15px"></i></button></div>
+     </div>
+     <div class="cp-msgs" id="ms" hidden></div>
+    </div>
+    <form class="cp-compose" id="f">
+     <div class="cp-box"><textarea id="ta" placeholder="Describe a role, ask for changes, or plan an interview…" aria-label="Message"></textarea><div class="cp-files" id="cfiles"></div><div class="row"><label class="cp-tool" title="Attach a file" aria-label="Attach a file"><i class="hgi hgi-stroke hgi-attachment-01 ico" style="font-size:20px"></i><input type="file" id="cf" multiple hidden></label><span class="cp-pop-wrap"><button type="button" class="cp-tool txt" id="tAt" aria-haspopup="true" aria-expanded="false"><i class="hgi hgi-stroke hgi-at ico" style="font-size:19px"></i>Job</button><div class="cp-pop" id="atMenu" hidden><small>Reference a job</small><button type="button" data-job="Sales Executive"><i class="hgi hgi-stroke hgi-briefcase-01 ico" style="font-size:18px"></i>Sales Executive</button></div></span><button type="button" class="cp-tool" id="tMic" aria-label="Dictate with your voice" title="Dictate with your voice"><i class="hgi hgi-stroke hgi-mic-01 ico" style="font-size:20px"></i></button><button class="cp-send" id="sd" type="submit" aria-label="Send" disabled><i class="hgi hgi-stroke hgi-arrow-up-02 ico" style="font-size:20px"></i></button></div></div>
+     <p class="cp-legal">Private to your account in this workspace. Messages and relevant job details are processed by AI. <a href="#">Privacy</a></p>
+    </form>
+   </section>
+  </div>
+ </div>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function toast(m){let t=$("#toast");if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t)}t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400)}
+$$("[data-newjob]").forEach(b=>b.onclick=()=>toast("The new job flow isn't built yet"));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+</script>
+<script>
+const ta=$("#ta"),sd=$("#sd"),ms=$("#ms"),em=$("#em"),cb=$("#cb");
+let sent=0;
+const md=t=>esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>");
+function bubble(role,html){
+ const d=document.createElement("div");d.style.cssText="display:flex;gap:10px;align-items:flex-start;"+(role==="me"?"justify-content:flex-end":"");
+ d.innerHTML=(role==="bot"?'<span style="width:32px;height:32px;border-radius:10px;background:#f3f4f6;display:grid;place-items:center;flex:none"><img src="eligible-icon.png" alt="" style="width:21px;height:21px;object-fit:contain"></span>':"")+
+  '<div style="max-width:82%;padding:12px 16px;border-radius:'+(role==="me"?"18px 6px 18px 18px;background:#1b6ee8;color:#fff":"6px 18px 18px 18px;background:#f3f4f6;color:#232838")+';font-size:15px;line-height:1.6">'+html+'</div>';
+ ms.appendChild(d);cb.scrollTo({top:cb.scrollHeight,behavior:"smooth"});return d;
+}
+function answer(t){
+ if(/interview|question/i.test(t))return "I can draft the interview for you. Tell me the **role** and the **three skills** that matter most, and I'll write the questions, mark the must-haves and set how each answer is graded. You review everything before it's applied.";
+ if(/catch|summar|update|where/i.test(t))return "Here's where you are:\n• **1 open role:** Sales Executive\n• **1 applicant:** Shakeel, who finished the AI interview\n• **Score 0 / 100.** Both must-haves were missed, and the AI suggests not advancing\n• **1 application** is waiting for your review.";
+ if(/job|role|hire|hiring|create|sales|developer|designer/i.test(t))return "Happy to help. A few quick questions so I can shape the role:\n1. What's the **job title** and team?\n2. What are the **must-haves** (2 or 3 skills a candidate can't lack)?\n3. Where is it based, and is it full time?\nI'll draft the description and an interview from your answers.";
+ return "I can help you **create a job**, **build an interview** or **catch you up** on your hiring. Tell me a bit about the role you have in mind.";
+}
+function send(t){
+ t=t.trim();if(!t)return;
+ em.hidden=true;ms.hidden=false;
+ if(!sent++){const cl=$("#cl");const b=document.createElement("button");b.className="cp-item on";b.innerHTML='<i class="hgi hgi-stroke hgi-message-01 ico" style="font-size:18px"></i><span></span>';b.lastChild.textContent=t;$$("#cl .cp-item").forEach(x=>x.classList.remove("on"));cl.prepend(b)}
+ bubble("me",md(t)+(files.length?"<br><small style='opacity:.85'>Attached: "+files.map(f=>esc(f.name)).join(", ")+"</small>":""));files.length=0;drawFiles();ta.value="";sd.disabled=true;
+ const ty=bubble("bot",'<span style="letter-spacing:3px;color:#a7adbb">•••</span>');
+ setTimeout(()=>{ty.remove();bubble("bot",md(answer(t)))},700);
+}
+ta.addEventListener("input",()=>{sd.disabled=!ta.value.trim()});
+ta.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send(ta.value)}});
+$("#f").addEventListener("submit",e=>{e.preventDefault();send(ta.value)});
+$$(".cp-chip").forEach(b=>b.onclick=()=>send(b.dataset.p));
+$("#nc").onclick=()=>{ms.innerHTML="";ms.hidden=true;em.hidden=false;sent=0;ta.focus()};
+/* composer tools */
+const files=[];
+function drawFiles(){$("#cfiles").innerHTML=files.map((f,i)=>`<span class="cp-file"><i class="hgi hgi-stroke hgi-attachment-01 ico" style="font-size:16px"></i><span>${esc(f.name)}</span><button type="button" data-rm="${i}" aria-label="Remove ${esc(f.name)}"><i class="hgi hgi-stroke hgi-cancel-01 ico" style="font-size:15px"></i></button></span>`).join("")}
+$("#cf").addEventListener("change",e=>{[...e.target.files].forEach(f=>{if(f.size>10*1024*1024){toast(f.name+" is over 10 MB")}else files.push({name:f.name})});e.target.value="";drawFiles()});
+$("#cfiles").addEventListener("click",e=>{const b=e.target.closest("[data-rm]");if(b){files.splice(+b.dataset.rm,1);drawFiles()}});
+const menu=$("#atMenu"),at=$("#tAt");
+at.addEventListener("click",e=>{e.stopPropagation();menu.hidden=!menu.hidden;at.setAttribute("aria-expanded",!menu.hidden)});
+document.addEventListener("click",()=>{menu.hidden=true;at.setAttribute("aria-expanded","false")});
+menu.addEventListener("click",e=>{const b=e.target.closest("[data-job]");if(!b)return;ta.value=(ta.value+(ta.value&&!/\s$/.test(ta.value)?" ":"")+"@"+b.dataset.job+" ");ta.dispatchEvent(new Event("input"));menu.hidden=true;ta.focus()});
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;let rec=null,listening=false;
+$("#tMic").addEventListener("click",()=>{
+ if(!SR){toast("Voice input isn't supported in this browser");return}
+ if(listening){rec&&rec.stop();return}
+ rec=new SR();rec.lang="en-US";rec.interimResults=false;
+ rec.onresult=e=>{const t=[...e.results].map(r=>r[0].transcript).join(" ");ta.value=(ta.value+" "+t).trim();ta.dispatchEvent(new Event("input"))};
+ rec.onend=()=>{listening=false;$("#tMic").classList.remove("on")};
+ rec.onerror=()=>{listening=false;$("#tMic").classList.remove("on");toast("Couldn't hear you. Check microphone permission")};
+ try{rec.start();listening=true;$("#tMic").classList.add("on");toast("Listening…")}catch(x){}
+});
+</script>
+<script src="shell.js"></script>
+
+</body>
+</html>

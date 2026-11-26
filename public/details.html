@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shakeel: full details | Eligible</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+<style>
+/* full details page */
+.dpage{max-width:1080px;margin:0 auto}
+.dhead{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.dhead h1{font:400 36px/1.1 var(--head);letter-spacing:-.04em}
+.dsub{display:flex;align-items:center;gap:10px;margin-top:6px;color:var(--mute);font-size:15px;flex-wrap:wrap}
+.btnb2{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px;border-radius:14px;background:#fff;border:1px solid var(--line);font:400 15px var(--head);white-space:nowrap}
+.btnb2:hover{background:var(--pill)}
+.dtabs{position:sticky;top:0;z-index:15;display:flex;gap:8px;overflow:auto;padding:14px 0 12px;margin:18px 0 0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+.dtab{flex:none;height:40px;padding:0 16px;border-radius:12px;background:var(--pill);font:400 14.5px var(--head);color:var(--ink2);display:inline-flex;align-items:center}
+.dtab:hover{background:#e9ebef}
+.dtab.on{background:#1b6ee8;color:#fff}
+.dcard{background:#fff;border:1px solid var(--line);border-radius:32px;padding:24px;margin-top:18px;scroll-margin-top:76px}
+.dh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.dh h2{font:400 22px var(--head);letter-spacing:-.025em;display:flex;align-items:center;gap:12px}
+.dh h2 .ico{font-size:22px;color:var(--mute)}
+.dh .sp{flex:1}
+.dnote{font-size:13.5px;color:var(--mute)}
+.dnote b{color:var(--ink);font-weight:500}
+.gh{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding:11px 16px;border-radius:12px;background:var(--pill);font:500 12.5px var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.gh b{font:500 15px var(--head);letter-spacing:0;text-transform:none}
+.gh b.neg{color:var(--red)}.gh b.pos{color:var(--green)}
+.rrow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:6px 16px;padding:16px 4px;border-bottom:1px solid #f1f2f5;align-items:start}
+.rrow:last-child{border-bottom:0}
+.rp-pts{font:500 18px var(--head);letter-spacing:-.02em;color:var(--green);text-align:right;padding-top:1px}
+.rp-pts.neg{color:var(--red)}.rp-pts.z{color:var(--faint)}
+.rt h4{font:500 16px/1.4 var(--head);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.rt h4 small{font:400 13px var(--head);color:var(--mute)}
+.rt p{margin-top:6px;font-size:14px;line-height:1.6;color:var(--mute);max-width:860px}
+.rt p b{font-weight:500;color:var(--ink2)}
+.rw{align-self:center}
+.rw a{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:10px;background:var(--pill);font:400 13.5px var(--head)}
+.rw a:hover{background:#e6e9ef}
+.afull details{border-bottom:1px solid #f1f2f5}
+.afull details:last-child{border-bottom:0}
+.afull summary{list-style:none;display:grid;grid-template-columns:40px minmax(0,1fr) auto 24px;gap:14px;align-items:center;padding:16px 4px;cursor:pointer}
+.afull summary::-webkit-details-marker{display:none}
+.afull summary:hover{background:#fafbfc}
+.afull .qn{width:40px;height:40px;border-radius:12px;background:linear-gradient(145deg,#7fb0ff,#2f74ec);color:#fff;display:grid;place-items:center;font:500 14px var(--head)}
+.afull .qt{font:500 16px/1.4 var(--head)}
+.afull .meta{display:flex;gap:6px 8px;flex-wrap:wrap;align-items:center;margin-top:8px;color:var(--mute);font-size:13px}
+.afull .sc{font:500 20px var(--head);letter-spacing:-.03em;white-space:nowrap;text-align:right}
+.afull .sc small{font:400 13px var(--head);color:var(--mute);letter-spacing:0}
+.afull .sc.z{color:var(--faint)}.afull .sc.p{color:var(--green)}
+.afull .chev{color:var(--faint);transition:transform .2s}
+.afull details[open] .chev{transform:rotate(180deg)}
+.afull .body{padding:0 4px 18px 54px;font-size:14px;line-height:1.65;color:var(--mute)}
+.tgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.tgrid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tile{background:var(--pill);border-radius:18px;padding:14px 16px;min-width:0}
+.tile.warn{background:#fff1de}
+.tile small{display:flex;align-items:center;gap:7px;color:var(--mute);font-size:13px}
+.tile small .ico{font-size:16px}
+.tile b{display:block;font:500 28px/1.2 var(--head);letter-spacing:-.03em;margin-top:6px}
+.tile b span{font:400 15px var(--head);color:var(--mute);letter-spacing:0}
+.tile em{display:block;font-style:normal;font-size:12.5px;color:var(--mute);margin-top:2px}
+.sub-h{margin:24px 0 4px;font:500 15px var(--head)}
+.sub-h small{font:400 13px var(--head);color:var(--mute);margin-left:6px}
+.srow2{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 4px;border-bottom:1px solid #f1f2f5}
+.srow2:last-child{border-bottom:0}
+.srow2 b{font:400 15.5px var(--head)}.srow2 small{color:var(--mute);font-size:13px;margin-left:8px}
+.srow2 span{font:400 14px var(--mono);color:var(--ink2);white-space:nowrap}
+.srow2 span i{font-style:normal;color:var(--mute)}
+.para{margin-top:14px;font-size:14.5px;line-height:1.7;color:var(--ink2);max-width:880px}
+.fine{margin-top:14px;font-size:13px;line-height:1.6;color:var(--mute);max-width:880px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip2{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:10px;background:#fff1de;color:var(--amber);font:400 13px var(--head)}
+.cl{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.cl .big{font:400 44px/1 var(--head);letter-spacing:-.05em}
+.cl .big small{font:400 16px var(--head);color:var(--mute);letter-spacing:0;margin-left:4px}
+.lvl{display:inline-flex;align-items:center;height:28px;padding:0 12px;border-radius:8px;background:var(--red-bg);color:var(--red);font:400 13.5px var(--head)}
+.cbar{height:10px;border-radius:99px;background:#eceef3;overflow:hidden;margin:14px 0 6px}
+.cbar i{display:block;height:100%;border-radius:99px;background:#c23250}
+.tl{margin-top:22px}
+.tl .cap{font-size:13px;color:var(--mute);margin-bottom:10px}
+.lane{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:center;margin-bottom:8px;font-size:13px;color:var(--mute)}
+.lane .trk{position:relative;height:16px;border-radius:6px;background:#f3f4f6}
+.lane .trk a{position:absolute;top:2px;bottom:2px;border-radius:4px;min-width:5px;background:var(--c)}
+.lane .trk a:hover{filter:brightness(.88);outline:2px solid rgba(0,0,0,.12)}
+.vl2{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:11px 4px;border-bottom:1px solid #f1f2f5;align-items:baseline}
+.vl2:last-child{border-bottom:0}
+.vl2 time{font:400 12.5px var(--mono);color:var(--mute)}
+.vl2 q{font:italic 400 14.5px/1.5 var(--head);quotes:none;color:var(--ink2)}
+.fl2{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:16px;align-items:center;padding:14px 4px;border-bottom:1px solid #f1f2f5}
+.fl2 .fth{width:96px;height:60px;border-radius:12px;background-size:cover;background-position:center;background-color:#e3e6ec}
+.fl2 h4{display:flex;align-items:center;gap:10px;font:500 16px var(--head);flex-wrap:wrap}
+.hi{display:inline-flex;height:24px;align-items:center;padding:0 10px;border-radius:8px;background:var(--red-bg);color:var(--red);font:400 12.5px var(--head)}
+.fl2 p{margin-top:4px;font-size:13.5px;color:var(--mute)}
+.fl2 p .quote{display:flex;gap:6px;align-items:center;margin-top:6px;color:var(--ink2)}
+.fl2 .go{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:10px;background:var(--pill);font:400 13.5px var(--head)}
+.fl2 .go:hover{background:#e6e9ef}
+.foot2{padding:14px 4px 0;font-size:13px;color:var(--mute)}
+.scored{margin:14px 4px 0;font-size:13px;color:var(--mute)}
+@media(max-width:900px){.tgrid,.tgrid.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.rrow{grid-template-columns:52px minmax(0,1fr)}.rw{grid-column:2}.lane{grid-template-columns:90px 1fr}.vl2{grid-template-columns:1fr;gap:2px}.fl2{grid-template-columns:72px 1fr}.fl2 .go{grid-column:2;justify-self:start}.fl2 .fth{width:72px;height:50px}.afull .body{padding-left:4px}.dhead h1{font-size:28px}}
+
+/* two-panel layout, no page scroll on wide screens */
+.dwork{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;height:calc(100vh - 230px);min-height:520px;align-items:stretch}
+.dpanel{background:#fff;border:1px solid var(--line);border-radius:32px;display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}
+.dph{display:flex;align-items:flex-start;gap:12px;padding:22px 24px 12px;flex:none}
+.dph h2{font:400 22px var(--head);letter-spacing:-.025em}
+.dph .dnote{margin-top:4px}
+.dtot{font-size:14px;color:var(--mute);padding-top:8px;white-space:nowrap}.dtot b{font:500 18px var(--head);color:var(--ink);margin-left:4px}
+.dscroll{flex:1;min-height:0;overflow:auto;padding:0 24px 20px}
+.dscroll .gh{position:sticky;top:0;z-index:2}
+.dsegs{display:flex;gap:4px;background:#f3f4f6;border-radius:16px;padding:5px;margin:14px 14px 0;overflow:auto;flex:none;scrollbar-width:none}
+.dsegs::-webkit-scrollbar{display:none}
+.dsegs button{flex:none;height:42px;padding:0 14px;border-radius:12px;font:400 14.5px var(--head);color:var(--mute);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.dsegs button:hover{color:var(--ink)}
+.dsegs button[aria-selected=true]{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.dsegs .n{font:500 11.5px var(--head);background:var(--red-bg);color:var(--red);border-radius:99px;padding:0 8px;line-height:20px}
+.dview{flex:1;min-height:0;overflow:hidden;position:relative;margin-top:6px}
+.dtrack{display:flex;width:600%;height:100%;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.dslide{width:calc(100% / 6);height:100%;overflow:auto;padding:14px 22px 22px}
+.dslide .dh{margin-bottom:8px}
+.dslide .tgrid,.dslide .tgrid.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dslide .lane{grid-template-columns:104px 1fr}
+.dslide .fl2{grid-template-columns:76px minmax(0,1fr) auto}.dslide .fl2 .fth{width:76px;height:52px}
+.dslide .vl2{grid-template-columns:1fr;gap:2px}
+.dslide .afull summary{grid-template-columns:36px minmax(0,1fr) auto 22px;gap:12px}
+.dslide .afull .qn{width:36px;height:36px}
+.dslide .afull .body{padding-left:48px}
+.dslide .cl .big{font-size:36px}
+@media(max-width:1180px){.dwork{grid-template-columns:1fr;height:auto}.dpanel{height:680px}}
+@media(max-width:900px){.dpanel{height:620px}.dslide .fl2{grid-template-columns:64px 1fr}.dslide .fl2 .go{grid-column:2;justify-self:start}.rrow{grid-template-columns:52px minmax(0,1fr)}.rw{grid-column:2}}
+
+.heat{margin-top:22px}
+.hleg{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:var(--mute);margin-bottom:12px}
+.hleg i.hc{display:inline-block;width:14px;height:14px;border-radius:4px}
+.hleg em{flex-basis:100%;font-style:normal;margin-top:6px;line-height:1.5}
+.hc{display:block;height:22px;border-radius:5px;background:#eef0f4}
+.hc.l1{background:#cfe0ff}.hc.l2{background:#7fb0f7}.hc.l3{background:#1b6ee8}
+.hleg .hc{height:14px}
+.hgroup{margin:16px 0 8px;font:500 12px var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.hrow{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:center;margin-bottom:5px}
+.hl{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:13px;color:var(--ink2);line-height:1.2;padding-right:4px}
+.hl b{font:500 11.5px var(--head);background:var(--pill);color:var(--mute);border-radius:99px;padding:1px 7px}
+.hcells{display:grid;grid-template-columns:repeat(30,1fr);gap:3px}
+a.hc{cursor:pointer;transition:transform .12s,box-shadow .12s}
+a.hc:hover,a.hc:focus-visible{transform:scale(1.18);box-shadow:0 0 0 2px #fff,0 0 0 4px #1b6ee8;position:relative;z-index:1}
+.haxis{display:grid;grid-template-columns:118px 1fr;gap:10px;margin-bottom:2px}
+.hax{position:relative;height:16px;font:400 11px var(--mono);color:var(--faint)}
+.hax span{position:absolute;transform:translateX(-50%)}
+.hax span:first-child{transform:none}.hax span:last-child{transform:translateX(-100%)}
+.hcap{margin-top:14px;padding:10px 14px;border-radius:12px;background:var(--pill);font-size:13.5px;color:var(--ink2);min-height:40px}
+
+.wslide{width:25%;height:100%;overflow:auto;padding:6px 24px 20px}
+#wsegs button .wt{font:500 13px var(--head);margin-left:2px}
+#wsegs button .wt.pos{color:var(--green)}#wsegs button .wt.neg{color:var(--red)}
+#wsegs{margin:4px 20px 0}
+.tile.hn{display:flex;flex-direction:column}
+.tile.hn small{min-height:2.6em;align-items:flex-start}
+.tile.hn b{margin-top:2px}
+.tile.hn em{margin-top:auto;padding-top:6px}
+.dph{align-items:center}
+.hblock{margin-top:4px}
+.hblock.red{margin-top:16px;padding-top:16px;border-top:1px solid #f1f2f5}
+.hblock.red .hc.l1{background:#fcdadd}.hblock.red .hc.l2{background:#f08a94}.hblock.red .hc.l3{background:#d6304a}
+.hblock.red a.hc:hover,.hblock.red a.hc:focus-visible{box-shadow:0 0 0 2px #fff,0 0 0 4px #d6304a}
+.hblock.red .hl b{background:#fde8ea;color:#c42a44}
+.hleg{margin-bottom:6px}
+.tile{display:block}
+.tile small{min-height:0!important}
+.tile b{margin-top:8px!important;font-size:26px}
+.tile b span{font-size:14px}
+.sigs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.sig{background:var(--pill);border-radius:18px;padding:14px 16px;min-width:0}
+.sig.hot{background:#fdecee}
+.sig .t{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sig .t b{font:500 14.5px/1.3 var(--head)}
+.sig .t span{font:400 13px var(--mono);color:var(--ink2);white-space:nowrap}
+.sig .sb2{height:6px;border-radius:99px;background:rgba(15,20,35,.08);margin:10px 0 9px;overflow:hidden}
+.sig .sb2 i{display:block;height:100%;border-radius:99px;background:#1b6ee8}
+.sig.hot .sb2 i{background:#d6304a}
+.sig p{font-size:13px;line-height:1.45;color:var(--mute)}
+.sig.nil .t b,.sig.nil p{color:var(--faint)}
+.tgrid.g3x{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.tgrid.g3x .tile b{font-size:22px}
+.tgrid.g3x .tile small{font-size:12.5px}
+@media(max-width:560px){.sigs{grid-template-columns:1fr}.tgrid.g3x{grid-template-columns:1fr!important}}
+/* calmer behaviour tab */
+.sigs{gap:14px!important;margin-top:22px!important}
+.sig{padding:20px 22px!important;border-radius:20px!important}
+.sig small{display:block;font:400 14px var(--head);color:var(--ink2)}
+.sig .sc2{font:400 32px/1.1 var(--head);letter-spacing:-.04em;margin:10px 0 8px;color:var(--ink)}
+.sig .sc2 span{font:400 15px var(--head);color:var(--mute);letter-spacing:0;margin-left:6px}
+.sig.hot .sc2{color:#c42a44}
+.sig p{font-size:13.5px!important;line-height:1.5!important}
+.quiet{display:flex;align-items:center;gap:10px;margin-top:14px;padding:14px 18px;border-radius:16px;background:#f6f7f9;color:var(--mute);font-size:14px}
+.quiet .ico{color:#12a05a;flex:none}
+.camrow{display:grid;grid-template-columns:repeat(3,1fr);margin-top:6px;background:var(--pill);border-radius:20px;padding:6px 0}
+.camrow>div{padding:14px 22px}
+.camrow>div+div{border-left:1px solid rgba(15,20,35,.08)}
+.camrow small{display:block;font-size:13px;color:var(--mute)}
+.camrow b{display:block;font:400 26px/1.2 var(--head);letter-spacing:-.03em;margin-top:6px}
+.camrow b span{font:400 14px var(--head);color:var(--mute);letter-spacing:0}
+#cam-h{margin-top:0}
+.dslide .dh+#camBody{margin-top:4px}
+.heat{margin-top:30px!important}
+.hrow{margin-bottom:8px!important}
+.hblock.red{margin-top:22px!important;padding-top:22px!important}
+@media(max-width:560px){.sigs{grid-template-columns:1fr!important}.camrow{grid-template-columns:1fr}.camrow>div+div{border-left:0;border-top:1px solid rgba(15,20,35,.08)}}
+.camrow .r b{color:#c42a44}
+.tile.warn{background:#fdecee}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html" aria-current="page"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><span>Workspace</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><span>Interviews</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>Full details</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t">
+   <a class="back" href="index.html" aria-label="Back to the interview"><i class="hgi hgi-stroke hgi-arrow-left-02 ico"></i></a>
+   <div><h1>Shakeel: full details</h1></div>
+  </div>
+  <div class="sp"></div>
+  <a class="gbtn" href="index.html"><i class="hgi hgi-stroke hgi-video-01 ico" style="font-size:18px"></i><span class="lbl">Back to the interview</span></a>
+  <button class="pbtn"><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
+ </div>
+
+ <div class="dwork">
+  <section class="dpanel" aria-labelledby="why-h">
+   <div class="dph"><div><h2 id="why-h">Why this score</h2></div><span class="sp"></span><span class="dtot">Total <b>0 / 100</b></span></div>
+   <div class="dsegs" id="wsegs" role="tablist" aria-label="Score parts"></div>
+   <div class="dview"><div class="dtrack" id="wtrack" style="width:400%"></div></div>
+  </section>
+
+  <aside class="dpanel" aria-label="More details">
+   <div class="dsegs" role="tablist" id="dsegs">
+    <button role="tab" aria-selected="true" data-i="0">Answers</button>
+    <button role="tab" aria-selected="false" data-i="1">Speech</button>
+    <button role="tab" aria-selected="false" data-i="2">Behaviour</button>
+    <button role="tab" aria-selected="false" data-i="3">Voices</button>
+    <button role="tab" aria-selected="false" data-i="4">Flags <span class="n">7</span></button>
+    <button role="tab" aria-selected="false" data-i="5">Session</button>
+   </div>
+   <div class="dview"><div class="dtrack" id="dtrack">
+    <section class="dslide" role="tabpanel" aria-label="Answers in full"><div class="dh"><h2>Answers in full <span style="font:400 15px var(--body);color:var(--mute)">8.8 / 55</span></h2></div><div class="afull" id="afull"></div></section>
+    <section class="dslide" role="tabpanel" aria-label="Speech and behaviour"><div class="dh"><h2>Speech and behaviour</h2></div><div id="speechBody"></div></section>
+    <section class="dslide" role="tabpanel" aria-label="Behaviour"><div id="cheatBody"></div><div class="dh" style="margin-top:44px"><h2 id="cam-h">On camera</h2></div><div id="camBody"></div></section>
+    <section class="dslide" role="tabpanel" aria-label="Voices"><div class="dh"><h2><i class="hgi hgi-stroke hgi-mic-01 ico"></i>Voices</h2></div><div id="voiceBody"></div><p class="scored">Scored 27/11/2026, 02:51:12</p></section>
+    <section class="dslide" role="tabpanel" aria-label="Integrity flags"><div class="dh"><h2><i class="hgi hgi-stroke hgi-flag-01 ico"></i>Integrity flags</h2><span class="sp"></span><span class="dnote">Signals for review, not verdicts</span></div><div id="flagBody"></div></section>
+    <section class="dslide" role="tabpanel" aria-label="Session"><div class="dh"><h2>Session</h2></div><div class="tgrid" id="sessBody"></div></section>
+   </div></div>
+  </aside>
+ </div>
+</main>
+</div>
+
+<button class="fab" id="fab" aria-label="Ask Eligible"><span class="fi"><img src="eligible-icon.png" alt=""></span>Ask Eligible</button>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const E=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const ico=(n,sz)=>`<i class="hgi hgi-stroke hgi-${n} ico"${sz?` style="font-size:${sz}px"`:""}></i>`;
+const pts=(v,cls)=>`<div class="rp-pts ${v<0?'neg':(v===0?'z':'')}">${v===0?'0':(v>0?'+':'−')+Math.abs(v).toFixed(Number.isInteger(Math.abs(v))?0:1)}</div>`;
+
+/* ---- Why this score ---- */
+const ANS=[
+ {n:1,t:"Walk me through how you decide which Upwork jobs to bid on.",of:11,p:2.2,tags:[["must","Must-have"],["part","Partly correct"]],g:"grade 1 / 5 · 0.3 s to start · 0 filler · 0 stutters · 106 wpm",r:"<b>Must-have.</b> Partly correct, graded 1/5. Identified portfolio fit as a relevant filter, but did not explain any further selection criteria despite follow-up prompts. This falls short of demonstrating the job-selection process required for the role. <b>Missed:</b> Budget assessment, Client history checks, Repeatable criteria for spending Connects, Tailored proposal opening."},
+ {n:2,t:"Tell me about a proposal that actually got a reply. What did you write?",of:7.5,p:2.9,tags:[["part","Partly correct"]],g:"grade 2 / 5 · 0.9 s to start · 1 filler · 0 stutters · 99 wpm",r:"<b>Important.</b> Partly correct, graded 2/5. Provided a relevant example and a reported outcome, but did not explain what the proposal actually said. Follow-up questions did not establish client-specific pitching or writing skills. <b>Missed:</b> Specific client problem, Actual proposal wording, Tailored opening, Explanation of how the proposal solution met the client's needs."},
+ {n:3,t:"How do you manage a Fiverr account day to day — gigs, buyer messages and orders?",of:11,p:2.2,tags:[["must","Must-have"],["part","Partly correct"]],g:"grade 1 / 5 · 1.2 s to start · 6 filler · 2 stutters · 96 wpm",r:"<b>Must-have.</b> Partly correct, graded 1/5. Described a limited buyer response activity, but also explicitly said they do not manage the account. The answer did not demonstrate day-to-day ownership of Fiverr gigs, messages and orders. <b>Missed:</b> Gig titles and descriptions, Response-time management, Clarifying buyer needs, Collecting order requirements, Managing orders and revisions."},
+ {n:4,t:"A Fiverr buyer asks for extra work that isn't part of the gig. How do you handle it?",of:7.5,p:1.5,tags:[["part","Partly correct"]],g:"grade 1 / 5 · 1.2 s to start · 2 filler · 0 stutters",r:"<b>Important.</b> Partly correct, graded 1/5. The incomplete answer suggests recognition of a scope boundary, consistent with the interviewer's follow-up. It did not explain how to preserve the relationship or secure payment for the extra work. <b>Missed:</b> Polite explanation of the agreed scope, Paid add-on or new order, Agreement on additional pricing before work, Avoiding a commitment to unpaid work."},
+ {n:5,t:"A client goes quiet after you send a proposal. What do you do next?",of:7.5,p:0,tags:[["na","Not answered"]],g:"grade 0 / 5",r:"<b>Important.</b> The question was asked, but no candidate response is recorded."},
+ {n:6,t:"How would you pitch the same service differently to an Upwork client and a Fiverr buyer?",of:7.5,p:0,tags:[["na","Not answered"]],g:"",r:"<b>Important.</b> This question was not asked, so platform-specific adaptation was not assessed."},
+ {n:7,t:"Tell me about a bid or deal you lost. What did you change afterwards?",of:3.5,p:0,tags:[["nice","Nice-to-have"],["na","Not answered"]],g:"",r:"<b>Nice-to-have.</b> This question was not asked, so learning from setbacks was not assessed."}
+];
+const DELIV=[
+ {t:"Time before answering",of:6.7,p:6.7,r:"0.8 s average before answering."},
+ {t:"Filler words",of:6.7,p:6.2,r:"2.8 per 100 words."},
+ {t:"Long pauses",of:3.3,p:3.3,r:"0 pauses over 3 s per minute of speech."},
+ {t:"Speaking pace",of:3.3,p:1.8,r:"96 words per minute."},
+ {t:"Repeated or broken-off words",of:0,p:0,r:"0.5 per 100 words. Shown for context only; stutters never cost points."}
+];
+const COMM=[
+ {t:"Clarity",of:6.3,p:1.9,r:"Graded 3/10."},{t:"Structure",of:6.3,p:1.3,r:"Graded 2/10."},
+ {t:"Relevance",of:6.3,p:1.9,r:"Graded 3/10."},{t:"Depth",of:6.3,p:.6,r:"Graded 1/10."}
+];
+const DEDUCT=[
+ {t:"Another voice on the candidate's microphone",p:-15,r:"3 voices besides the candidate's spoke on their microphone.",at:75},
+ {t:"Speech while the candidate's lips were still",p:-6,r:"Speech was heard while their lips were still 19 times.",at:138},
+ {t:"Another person in view",p:-15,r:"Another person appeared 13 times (282 s in all).",at:44},
+ {t:"Phone in view",p:-5,r:"A phone was in view 1 time (1 s).",at:158},
+ {t:"Looked away from the screen",p:-6,r:"Looked away 11 times (6 left, 5 right); the first 5 are free.",at:36}
+];
+const grp=(name,total,cls)=>`<div class="gh"><span>${name}</span><b class="${cls}">${total}</b></div>`;
+const row=(o,watch)=>`<div class="rrow">${pts(o.p)}<div class="rt"><h4>${o.n?`Q${o.n}: `:""}${E(o.t)}${o.of!=null?`<small>of ${o.of}</small>`:""}</h4><p>${o.r}</p></div>${watch?`<div class="rw"><a href="index.html?t=${o.at}">${ico("play",13)}Watch</a></div>`:`<span></span>`}</div>`;
+function slider(segsSel,trackSel,n){
+ let c=0;const bs=[...document.querySelectorAll(segsSel+" button")],pn=[...document.querySelectorAll(trackSel+" > section")],tr=$(trackSel),vw=tr.parentElement;
+ const go=i=>{c=Math.max(0,Math.min(n-1,i));tr.style.transform=`translateX(${-c*100/n}%)`;bs.forEach((b,k)=>b.setAttribute("aria-selected",k===c));pn.forEach((p,k)=>{p.inert=k!==c;p.setAttribute("aria-hidden",k!==c)});bs[c].scrollIntoView({inline:"nearest",block:"nearest",behavior:"smooth"})};
+ bs.forEach(b=>b.onclick=()=>go(+b.dataset.i));
+ $(segsSel).onkeydown=e=>{if(e.key==="ArrowRight")go(c+1);if(e.key==="ArrowLeft")go(c-1)};
+ let sx=null;vw.addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+ vw.addEventListener("touchend",e=>{if(sx==null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>70)go(c+(dx<0?1:-1));sx=null});
+ go(0);return go}
+const WG=[["Answers","+8.8","pos",ANS,false],["Delivery","+18","pos",DELIV,false],["Communication","+5.7","pos",COMM,false],["Deductions","−47","neg",DEDUCT,true]];
+$("#wsegs").innerHTML=WG.map((g,i)=>`<button role="tab" aria-selected="${i===0}" data-i="${i}">${g[0]}<b class="wt ${g[2]}">${g[1]}</b></button>`).join("");
+$("#wtrack").innerHTML=WG.map(g=>`<section class="wslide" role="tabpanel" aria-label="${g[0]}">${g[3].map(a=>row(a,g[4])).join("")}</section>`).join("");
+slider("#wsegs","#wtrack",4);
+
+/* ---- Answers in full ---- */
+$("#afull").innerHTML=ANS.map(a=>`<details><summary><span class="qn">${String(a.n).padStart(2,"0")}</span><div><div class="qt">${E(a.t)}</div><div class="meta">${a.tags.map(x=>`<span class="tag t-${x[0]}">${x[1]}</span>`).join("")}${a.g?`<span>${a.g}</span>`:""}</div></div><div class="sc ${a.p?'p':'z'}">${a.p?'+'+a.p.toFixed(1):'0'} <small>/ ${a.of}</small></div>${ico("arrow-down-01",20).replace('class="hgi','class="chev hgi')}</summary><div class="body">${a.r}</div></details>`).join("");
+
+/* ---- Speech and behaviour ---- */
+const tile=(l,v,n,w,icn)=>{const short=n&&n.length<=12;return `<div class="tile ${w?'warn':''}"${n&&!short?` title="${n}"`:""}><small>${icn?ico(icn):""}${l}</small><b>${v}${short?` <span>${n}</span>`:""}</b></div>`};
+$("#speechBody").innerHTML=
+ `<div class="tgrid">${tile("Filler words","11","2.8 per 100 words")+tile("Stutters","2","counted, never scored · 0.5 per 100 words")+tile("Long pauses","0","over 3 seconds")+tile("Time before answering","0.8 s","avg")+tile("Speaking pace","96","wpm")+tile("Talked over the interviewer","5","times")+tile("Hand raised","21","times","","")+tile("Questions","5 / 7","asked 7 follow-ups")}</div>`+
+ `<div class="sub-h">How delivery was scored <small>(18 / 20)</small></div>`+
+ [["Speaking pace","96 words per minute","1.8 / 3.3"],["Repeated or broken-off words","0.5 per 100 words (counted, not scored)","0 / 0"],["Long pauses","0 pauses over 3 s per minute of speech","3.3 / 3.3"],["Filler words","2.8 per 100 words","6.2 / 6.7"],["Time before answering","0.8 s average before answering","6.7 / 6.7"]].map(r=>`<div class="srow2"><div><b>${r[0]}</b><small>${r[1]}</small></div><span>${r[2]}</span></div>`).join("")+
+ `<p class="fine">These measure how fluently someone spoke, not how they felt. Stutters are counted for context but never cost points, so people with a speech difference, or answering in a second language, are not penalised.</p>`+
+ `<div class="sub-h">Communication <small>(5.7 / 25)</small></div>`+
+ `<div class="tgrid">${tile("Clarity","3 <span>/ 10</span>","")+tile("Structure","2 <span>/ 10</span>","")+tile("Relevance","3 <span>/ 10</span>","")+tile("Depth","1 <span>/ 10</span>","")}</div>`+
+ `<p class="para">Relevant points were identifiable, but answers rarely developed into complete explanations, examples or processes, even after targeted follow-ups. These ratings reflect answer content and organisation, not grammar, fluency or apparent transcription errors; written English was not directly demonstrated.</p>`+
+ `<div class="sub-h">Integrity signals</div><div class="chips"><span class="chip2">${ico("alert-02",15)}Another person in view ×7</span></div>`;
+
+/* ---- Cheating likelihood ---- */
+const CL=[["Other voices","3 voices besides the candidate · lips still 19×",30,30],["Other people in view","3 people · 282 s in all",20,20],["Phone or notes","Phone in view · 1 s",2.6,20],["Looking away","11% of the time · 6 left, 5 right",7.1,15],["Left the interview tab","Nothing noticed",0,10],["Face not visible","Nothing noticed",0,5]];
+$("#cheatBody").innerHTML=`<div class="dh" style="align-items:flex-start"><div><h2 id="ch-h">Cheating likelihood</h2><div class="dnote" style="margin-top:6px">From what the camera and microphone picked up. A signal to review, not a verdict (not part of the score).</div></div><span class="sp"></span><div class="cl"><span class="big">60<small>/ 100</small></span><span class="lvl">High</span></div></div><div class="cbar"><i style="width:60%"></i></div>`+`<div class="sigs">${CL.filter(r=>r[2]>0).map(r=>{const hot=r[2]/r[3]>=.5;return `<div class="sig ${hot?"hot":""}"><small>${r[0]}</small><div class="sc2">${r[2]}<span>/ ${r[3]}</span></div><p>${r[1]}</p></div>`}).join("")}</div><div class="quiet">${ico("checkmark-circle-02",18)}<span>Nothing noticed: ${CL.filter(r=>r[2]===0).map(r=>r[0].toLowerCase()).join(", ")}</span></div>`;
+
+
+/* ---- heat map: when did each thing happen? ---- */
+const NB=30;
+const GROUPS=[
+ {t:"Where they looked and what they did",rows:[["Looked left",0],["Looked right",1],["Hand raised",2]]},
+ {t:"Integrity signals",rows:[["Other people",3],["Phone in view",4],["Voice, lips still",5]]}
+];
+const fm=sec=>Math.floor(sec/60)+":"+String(Math.floor(sec%60)).padStart(2,"0");
+function heat(){
+ const bl=LEN/NB;
+ const lvl=c=>c<=0?0:c/bl<.25?1:c/bl<.6?2:3;
+ const word=["none","a little","some","a lot"];
+ const rowHtml=(name,i)=>{
+  const L=LANES[i],cov=Array(NB).fill(0);
+  L.m.forEach(([a,b])=>{let st=(a-X0)/XW*LEN,en=(b-X0)/XW*LEN;if(en-st<2)en=st+2;
+   for(let k=0;k<NB;k++){const o=Math.min(en,(k+1)*bl)-Math.max(st,k*bl);if(o>0)cov[k]+=o}});
+  const n=L.l.match(/\((\d+)\)/)[1];
+  const cells=cov.map((c,k)=>{const v=lvl(c),r=`${fm(k*bl)}–${fm((k+1)*bl)}`,msg=`${r} · ${name}: ${v?word[v]+" ("+Math.round(c)+" s of "+Math.round(bl)+" s)":"none"}`;
+   return v?`<a class="hc l${v}" href="index.html?t=${Math.round(k*bl)}" title="${msg}" aria-label="${msg}. Watch"></a>`:`<span class="hc l0" title="${msg}"></span>`}).join("");
+  return `<div class="hrow"><span class="hl">${name}<b>${n}</b></span><div class="hcells">${cells}</div></div>`;
+ };
+ const axis=[0,1,2,3,4,5,6].map(m=>`<span style="left:${(m*60/LEN*100).toFixed(2)}%">${m}:00</span>`).join("");
+ $("#camBody").insertAdjacentHTML("beforeend",
+  `<div class="heat"><div class="hleg"><span>Less</span><i class="hc l0"></i><i class="hc l1"></i><i class="hc l2"></i><i class="hc l3"></i><span>More</span></div>
+   <div class="haxis"><span class="hpad"></span><div class="hax">${axis}</div></div>`+
+  GROUPS.map((g,gi)=>`<div class="hblock ${gi?"red":""}">`+g.rows.map(r=>rowHtml(r[0],r[1])).join("")+`</div>`).join("")+
+  `</div>`);
+}
+
+/* ---- On camera ---- */
+const LANES=[
+ {l:"Looked left (6)",c:"#1fa2e0",m:[[277,282],[551,556],[1013,1018],[1105,1110],[1180,1185],[1281,1286]]},
+ {l:"Looked right (5)",c:"#6b63f5",m:[[679,684],[787,792],[808,832],[898,903],[988,993]]},
+ {l:"Hand raised (21)",c:"#8b5cf6",m:[[160,180],[183,190],[228,263],[268,276],[294,300],[353,358],[368,382],[598,604],[620,628],[800,805],[810,833],[850,857],[863,868],[880,888],[892,902],[924,932],[935,994],[1043,1058],[1063,1098],[1285,1292]]},
+ {l:"Other people (13)",c:"#b3243f",m:[[183,192],[205,213],[236,243],[268,276],[284,359],[380,388],[393,567],[603,632],[637,648],[652,985],[1002,1033],[1068,1141],[1246,1336]]},
+ {l:"Phone (1)",c:"#b3243f",m:[[810,815]]},
+ {l:"Voice, lips still (19)",c:"#e03060",m:[[194,200],[206,212],[300,307],[330,340],[478,488],[530,538],[567,575],[642,652],[810,818],[822,834],[845,855],[995,1008],[1012,1032],[1035,1048],[1052,1060],[1068,1074],[1100,1115],[1193,1198],[1200,1212]]}
+];
+const X0=160,XW=1185,LEN=363;
+$("#camBody").innerHTML=
+ `<div class="camrow"><div><small>Looked left</small><b>6 <span>times</span></b></div><div><small>Looked right</small><b>5 <span>times</span></b></div><div><small>Hand raised</small><b>21 <span>times</span></b></div></div>`;
+heat();
+
+/* ---- Voices ---- */
+const VO=[["19:15:00","Hello."],["19:15:08","Hi bro."],["19:15:15","You the viewer."],["19:15:28","What's the name of the studio? That's it. That's the name of the studio."],["19:15:41","That's it. That's the name of studio. That's the name of the studio. That's name of that studio."],["19:15:49","That's the name of that."],["19:15:55","Studio? That's the name of that studio? That is the name of that studio. That is the name of that studio…"],["19:16:03","That's the name. That's name of that studio… That is the name. That is the"],["19:16:12","Name of that studio…"],["19:16:18","And he is Tamir. That's the"],["19:17:22","Managing… AIR"],["19:17:30","So it's"],["19:18:02","Detecting me."],["19:18:05","He's asking that."],["19:18:07","We noticed another person in view. If there is another person, you can explain it here."],["19:18:12","Do"],["19:18:20","You"],["19:18:23","You can say I want to end the interview."],["19:18:35","Do you"],["19:18:50","Response"],["19:19:30","For an example, I want to understand this one."],["19:19:38","Like,"],["19:19:49","I"],["19:20:02","I will basically go to him and tell him that this one is out of"],["19:20:37","Go"]];
+$("#voiceBody").innerHTML=`<div class="camrow"><div class="r"><small>Other voices</small><b>4 <span>voices</span></b></div><div class="r"><small>Speech, lips still</small><b>19 <span>times</span></b></div><div><small>Speaking time</small><b>116 <span>s</span></b></div></div><div class="sub-h" style="margin-top:28px">What the other voices said</div>`+VO.map(v=>`<div class="vl2"><time>${v[0]}</time><q>“${E(v[1])}”</q></div>`).join("");
+
+/* ---- Integrity flags ---- */
+const FL=[["5:00","2s+",300,"20% 40%"],["4:37","3s+",277,"60% 30%"],["4:15","25s+",255,"30% 50%"],["3:03","28s+",183,"70% 40%"],["2:32","3s+",152,"40% 30%"],["1:19","6s+",79,"55% 60%"],["0:44","2s+",44,"35% 45%"]];
+$("#flagBody").innerHTML=FL.map((f,i)=>`<div class="fl2"><div class="fth" style="background-image:url('candidate-video.jpg');background-position:${f[3]};background-size:220%"></div><div><h4><span class="hi">High</span>Another person in view</h4><p>at ${f[0]} · lasted ${f[1]}${i===6?`<span class="quote">${ico("bubble-chat",15)}Candidate: they are helping me to get the interview done.</span>`:""}</p></div><a class="go" href="index.html?t=${f[2]}">${ico("play",13)}Watch</a></div>`).join("")+`<div class="foot2">Left fullscreen 0× · switched away 0×</div>`;
+
+/* ---- Session ---- */
+$("#sessBody").innerHTML=[["Started","26/11/2026, 19:14:46"],["Finished","26/11/2026, 19:20:53"],["Length","6 min"],["Recording","1 part"],["Transcript","27 lines"],["Interview language","English (India)"],["Snapshots","7"]].map(r=>`<div class="tile"><small>${r[0]}</small><b style="font-size:18px">${r[1]}</b></div>`).join("");
+
+/* ---- tab slider ---- */
+let cur=0;const tabs=[...document.querySelectorAll("#dsegs button")],slides=[...document.querySelectorAll(".dslide")];
+function go(i){cur=Math.max(0,Math.min(tabs.length-1,i));
+ $("#dtrack").style.transform=`translateX(${-cur*100/tabs.length}%)`;
+ tabs.forEach((b,k)=>b.setAttribute("aria-selected",k===cur));
+ slides.forEach((p,k)=>{p.inert=k!==cur;p.setAttribute("aria-hidden",k!==cur)});
+ tabs[cur].scrollIntoView({inline:"nearest",block:"nearest",behavior:"smooth"})}
+tabs.forEach(b=>b.onclick=()=>go(+b.dataset.i));
+$("#dsegs").onkeydown=e=>{if(e.key==="ArrowRight")go(cur+1);if(e.key==="ArrowLeft")go(cur-1)};
+let sx=null;const dv=$(".dview");
+dv.addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+dv.addEventListener("touchend",e=>{if(sx==null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>70)go(cur+(d<0?1:-1));sx=null});
+go(0);
+function toast(m){const e=$("#toast");e.textContent=m;e.classList.add("show");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("show"),2200)}
+$("#menu")&&($("#menu").onclick=()=>$("#side").classList.toggle("open"));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#side").classList.remove("open")});
+</script>
+<script src="shell.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

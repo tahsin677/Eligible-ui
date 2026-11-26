@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings | Eligible</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html" aria-current="page"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>Settings</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t"><div><h1>Settings</h1><p class="pdesc">Organization profile and workspace preferences.</p></div></div>
+  <div class="sp"></div>
+  <button class="pbtn" data-newjob><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
+ </div>
+ <div class="pg">
+
+  <div class="two">
+   <section class="pcard"><h2>Organization</h2>
+    <div class="logo-row"><span class="logo-tile" id="lt"><img src="vector3-logo.png" alt="Vector3 LLC" style="object-fit:contain;padding:12px"></span><div><b>Company logo <small>(optional)</small></b><p>PNG, JPG or WebP, up to 2 MB. Add or change it later in Settings.</p><label class="bk" style="cursor:pointer"><i class="hgi hgi-stroke hgi-upload-01 ico" style="font-size:18px"></i>Upload logo<input type="file" id="lf" accept="image/png,image/jpeg,image/webp" hidden></label></div></div>
+    <form id="f" class="fgrid" autocomplete="off">
+     <div class="full"><label class="lbl2" for="nm">Name</label><input class="inp" id="nm" value="Vector3 LLC"></div>
+     <div><label class="lbl2" for="in">Industry</label><input class="inp" id="in" value="Design and Dev"></div>
+     <div><label class="lbl2" for="sz">Size</label><input class="inp" id="sz" value="2–10"></div>
+     <div class="full"><label class="lbl2" for="wb">Website</label><input class="inp" id="wb" placeholder="https://"></div>
+     <div class="full"><button class="pri2" type="submit">Save changes</button></div>
+    </form>
+   </section>
+   <section class="pcard"><h2>Your role</h2><span class="role-pill">OWNER</span><p class="hint" style="margin-top:18px">Multi-tenant isolation is enforced at the database via row-level security. Members can only access rows belonging to organizations they belong to.</p></section>
+  </div>
+ </div>
+</main>
+</div>
+<button class="fab" id="fab" aria-label="Ask Eligible"><span class="fi"><img src="eligible-icon.png" alt=""></span>Ask Eligible</button>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function toast(m){let t=$("#toast");if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t)}t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2400)}
+$$("[data-newjob]").forEach(b=>b.onclick=()=>toast("The new job flow isn't built yet"));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+</script>
+<script>
+$("#lf").addEventListener("change",e=>{
+ const f=e.target.files[0];if(!f)return;
+ if(f.size>2*1024*1024){toast("That file is over 2 MB");e.target.value="";return}
+ const r=new FileReader();r.onload=()=>{$("#lt").innerHTML='<img alt="Company logo" src="'+r.result+'">';toast("Logo ready. Save changes to keep it")};r.readAsDataURL(f);
+});
+$("#f").addEventListener("submit",e=>{e.preventDefault();if(!$("#nm").value.trim()){toast("Name can't be empty");$("#nm").focus();return}toast("Changes saved")});
+</script>
+<script src="shell.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eligible | Hiring Workspace</title>
+<meta name="theme-color" content="#fff8f2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="eligible-icon.png">
+<link rel="apple-touch-icon" href="eligible-icon.png">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+ <symbol id="i-checkc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+ <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0ZM12 9v4M12 17h.01"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+ <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+ <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5 19 12 7 19.5Z"/></symbol>
+ <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+ <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 1-1h13l-2 5 2 5H5"/></symbol>
+ <symbol id="i-redo" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-15-6.7L3 8M3 3v5h5M3 12a9 9 0 0 0 15 6.7L21 16M21 21v-5h-5"/></symbol>
+ <symbol id="i-wand" viewBox="0 0 24 24"><path d="m15 4 1 2 2 1-2 1-1 2-1-2-2-1 2-1ZM4 20 15 9M17 14l.7 1.3L19 16l-1.3.7L17 18l-.7-1.3L15 16l1.3-.7Z"/></symbol>
+ <symbol id="i-vol" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9Z"/><path class="wave" d="M16 8a5 5 0 0 1 0 8M18.5 5a9 9 0 0 1 0 14"/></symbol>
+ <symbol id="i-fs" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+ <symbol id="i-cam" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="m22 8-6 4 6 4Z"/></symbol>
+ <symbol id="i-tree" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="5" rx="1.5"/><rect x="3" y="16" width="6" height="5" rx="1.5"/><rect x="14" y="9" width="7" height="5" rx="1.5"/><path d="M6 8v8M6 12h8"/></symbol>
+</defs></svg>
+
+<div class="app">
+<aside class="side" id="side">
+ <div class="brand"><a class="wm" href="overview.html" aria-label="Eligible home"><img src="eligible-logo.png" alt="Eligible" class="logo"></a>
+  <a class="wmini" href="overview.html" aria-label="Eligible home"><img src="eligible-icon.png" alt=""></a>
+  <button class="ib" aria-label="Collapse sidebar"><i class="hgi hgi-stroke hgi-sidebar-left ico"></i></button></div>
+ <button class="ws" aria-label="Switch workspace"><span><b>Vector3 LLC</b><small>Company workspace</small></span><i class="hgi hgi-stroke hgi-unfold-more ico"></i></button>
+ <button class="sbox" id="cmdk"><i class="hgi hgi-stroke hgi-search-01 ico"></i>Search pages<kbd>⌘K</kbd></button>
+ <div><div class="grp">Hiring</div><nav>
+  <a href="overview.html"><i class="hgi hgi-stroke hgi-home-01 ico"></i>Overview</a>
+  <a href="assistant.html"><i class="hgi hgi-stroke hgi-sparkles ico"></i>AI assistant</a>
+  <a href="jobs.html"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Jobs</a>
+  <a href="applications.html"><i class="hgi hgi-stroke hgi-user-multiple ico"></i>Applications</a>
+  <a href="interviews.html" aria-current="page"><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interviews</a></nav></div>
+ <div><div class="grp">Workspace</div><nav>
+  <a href="#"><i class="hgi hgi-stroke hgi-credit-card ico"></i>Billing</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-user-group ico"></i>Team</a>
+  <a href="settings.html"><i class="hgi hgi-stroke hgi-setting-07 ico"></i>Settings</a>
+  <a href="#"><i class="hgi hgi-stroke hgi-audit-01 ico"></i>Audit logs</a></nav></div>
+ <button class="soon" id="soon">COMING SOON <i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:15px;"></i></button>
+ <div class="me"><span class="av"><img src="tahsin3.jpg" alt="Tahsin"></span><span><b>Tahsin</b><small>Workspace Owner</small></span><button class="ib" aria-label="Sign out"><i class="hgi hgi-stroke hgi-logout-01 ico"></i></button></div>
+</aside>
+
+<main class="main">
+ <div class="crumbs" aria-label="Breadcrumb"><span>Vector3 LLC</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><span>Workspace</span><i class="hgi hgi-stroke hgi-arrow-right-01 ico" style="font-size:14px"></i><b>Interviews</b></div>
+ <div class="hd">
+  <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
+  <div class="t">
+   <a class="back" href="#" aria-label="All interviews"><i class="hgi hgi-stroke hgi-arrow-left-02 ico"></i></a>
+   <div>
+    <h1>Shakeel</h1></div>
+  </div>
+  <div class="sp"></div>
+  <a class="gbtn" href="details.html"><span class="lbl">Full details</span><i class="hgi hgi-stroke hgi-arrow-right-02 ico" style="font-size:18px"></i></a>
+  <button class="pbtn"><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px;"></i></span>New job</button>
+ </div>
+
+ <div class="work">
+  <!-- LEFT: recording, then AI summary + Full details -->
+  <div class="col">
+   <section class="card" aria-label="Interview recording">
+    <div class="ch"><h2><i class="hgi hgi-stroke hgi-video-01 ico"></i>Interview recording</h2></div>
+    <div class="vid" id="stage">
+     <div id="ytwrap" aria-hidden="true"><div id="ytplayer"></div></div>
+     <button class="big" id="bigplay" aria-label="Play"><i class="hgi hgi-stroke hgi-play ico"></i></button>
+     <div class="vctl">
+      <button class="ib" id="pp" aria-label="Play"><i class="hgi hgi-stroke hgi-play ico" id="ppi"></i></button>
+      <span class="time" id="time">0:00 / 6:03</span>
+      <div class="seek" id="seek" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="363" aria-valuenow="0"><div class="tr"><div class="fill" id="fill"></div><div class="th" id="th"></div></div></div>
+      <div class="spd"><button class="sbtn" id="sp" aria-label="Playback speed">1x</button><div class="pop" id="pop"><button data-s=".75" aria-checked="false">0.75×</button><button data-s="1" aria-checked="true">1×</button><button data-s="1.5" aria-checked="false">1.5×</button><button data-s="2" aria-checked="false">2×</button></div></div>
+      <button class="ib" id="mute" aria-label="Mute"><i class="hgi hgi-stroke hgi-volume-high ico"></i></button>
+      <button class="ib" id="fs" aria-label="Fullscreen"><i class="hgi hgi-stroke hgi-maximize-screen ico"></i></button>
+     </div>
+    </div>
+    <div class="qchips" id="qchips" role="group" aria-label="Jump to question"></div>
+   </section>
+
+   <section class="card sum" aria-label="AI summary">
+        <div class="metas">
+     <span class="meta"><i class="hgi hgi-stroke hgi-user-account ico"></i>Shakeel</span>
+     <span class="meta"><i class="hgi hgi-stroke hgi-calendar-03 ico"></i>26/11/2026</span>
+     <span class="meta"><i class="hgi hgi-stroke hgi-briefcase-01 ico"></i>Sales Executive</span>
+     <span class="meta status"><i class="sdot"></i>Completed</span>
+    </div>
+    <div class="aisum"><h3><i class="hgi hgi-stroke hgi-sparkles ico" style="font-size:22px"></i>AI Summary of Interview</h3>
+     <p>The candidate identified portfolio fit as an Upwork selection criterion and reported winning an ecommerce project, but did not demonstrate a repeatable bidding process or explain a tailored proposal. Fiverr account management, another must-have, was not established beyond replying to enquiries and suggesting a budget. The evidence does not support advancing for a role requiring immediate ownership of both channels; written English remains unassessed. <a class="seelink" href="details.html">See details</a></p></div>
+   </section>
+  </div>
+
+  <!-- RIGHT: slider -->
+  <aside class="card rp" aria-label="Scores, must-haves and transcript">
+   <div class="segs" role="tablist" id="segs">
+    <span class="ind" id="ind"></span>
+    <button role="tab" aria-selected="true" data-i="0">Score</button>
+    <button role="tab" aria-selected="false" data-i="1">Must-haves <span class="n">0/2</span></button>
+    <button role="tab" aria-selected="false" data-i="2">Transcript</button>
+   </div>
+   <div class="view" id="view">
+    <div class="track" id="track">
+
+     <!-- SLIDE 1: score -->
+     <section class="slide" role="tabpanel" aria-label="Overall score">
+      <section class="shero" aria-label="Overall score">
+       <div class="stop">
+        <div><span class="slabel">Overall score</span><span class="aitip"><button class="aibtn" id="aibtn" aria-label="AI suggestion" aria-describedby="aitipbox" aria-expanded="false"><i class="hgi hgi-stroke hgi-information-circle ico" style="font-size:17px"></i></button><span class="aitipbox" id="aitipbox" role="tooltip"><i class="dot"></i>AI suggests: <b>Don't advance</b></span></span>
+         <div class="snum">0<small>/ 100</small></div></div>
+        <div class="sright"><div class="sbtns"><button class="tbtn" id="why"><i class="hgi hgi-stroke hgi-information-circle ico" style="font-size:17px"></i>Why this score</button><button class="tbtn" id="rescore"><i class="hgi hgi-stroke hgi-refresh ico" style="font-size:17px"></i>Rescore</button></div></div>
+       </div>
+       <div class="slist">
+        <div class="srow ra"><i class="hgi hgi-stroke hgi-task-01 ico"></i><div class="sl"><b>Answers</b><small>7 questions</small></div><div class="sb"><i style="width:16%"></i></div><div class="sv">8.8<small>/ 55</small></div></div>
+        <div class="srow rd"><i class="hgi hgi-stroke hgi-mic-01 ico"></i><div class="sl"><b>Delivery</b><small>Pace and clarity</small></div><div class="sb"><i style="width:90%"></i></div><div class="sv">18<small>/ 20</small></div></div>
+        <div class="srow rc"><i class="hgi hgi-stroke hgi-bubble-chat ico"></i><div class="sl"><b>Communication</b><small>Written English unassessed</small></div><div class="sb"><i style="width:17.6%"></i></div><div class="sv">4.4<small>/ 25</small></div></div>
+        <div class="srow neg"><i class="hgi hgi-stroke hgi-minus-sign-circle ico"></i><div class="sl"><b>Integrity deductions</b><small>From 7 flags</small></div><div class="sb x"></div><div class="sv">−40</div></div>
+       </div>
+       <div class="sflags"><i class="hgi hgi-stroke hgi-flag-01 ico"></i><p><b>7 integrity flags</b><span>Another person in view</span></p><button class="fcta" id="flagsbtn">Behaviour &amp; flags<span class="go"><i class="hgi hgi-stroke hgi-arrow-right-02 ico" style="font-size:18px"></i></span></button></div>
+      </section>
+      <div class="ph" style="margin-top:22px"><h3>Answers</h3><span class="sp"></span><a class="vl" href="details.html">View details <i class="hgi hgi-stroke hgi-arrow-right-02 ico" style="font-size:15px;"></i></a></div>
+      <div class="filters" role="group" aria-label="Filter answers"><button class="fl" data-f="all" aria-pressed="true">All 7</button><button class="fl" data-f="must" aria-pressed="false">Must-have</button><button class="fl" data-f="na" aria-pressed="false">Not answered</button></div>
+      <div id="alist"></div>
+     </section>
+
+     <!-- SLIDE 2: must-haves -->
+     <section class="slide" role="tabpanel" aria-label="Must-haves">
+      <div class="ph"><h3>Must-haves</h3><span class="sp"></span><a class="vl" href="details.html">View details <i class="hgi hgi-stroke hgi-arrow-right-02 ico" style="font-size:15px;"></i></a></div>
+      <p class="mdesc">From the job's hiring brief. Candidates are ranked on these first, then on the score.</p>
+      <div class="nums"><div><div class="l">Met</div><div class="v">0 of 2</div></div><div><div class="l">Partly correct</div><div class="v">2</div></div></div>
+      <article class="mcard">
+       <header class="mc-h"><span class="mc-q qc1">Q1</span><div class="mc-t"><b>Upwork bidding judgement</b><span class="mc-s">Must-have · not met</span></div><span class="tag t-must">Missed</span></header>
+       <div class="mc-score"><div class="meter" aria-label="1 out of 5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="frac">1/5</span><span class="tag t-part">Partly correct</span></div>
+       <div class="mc-block"><small>Question</small><p>Walk me through how you decide which Upwork jobs to bid on.</p></div>
+       <div class="mc-why"><i class="hgi hgi-stroke hgi-information-circle ico" style="font-size:20px"></i><p>Bidding is the core of the role, and this shows whether they can prioritise effort.</p></div>
+       <footer class="mc-f"><button class="pa" data-at="3"><span class="pt"><i class="hgi hgi-stroke hgi-play ico" style="font-size:15px"></i></span>Play answer</button><span class="mc-time">Starts at 0:03</span></footer>
+      </article>
+      <article class="mcard">
+       <header class="mc-h"><span class="mc-q qc3">Q3</span><div class="mc-t"><b>Fiverr account management</b><span class="mc-s">Must-have · not met</span></div><span class="tag t-must">Missed</span></header>
+       <div class="mc-score"><div class="meter" aria-label="1 out of 5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="frac">1/5</span><span class="tag t-part">Partly correct</span></div>
+       <div class="mc-block"><small>Question</small><p>How do you manage a Fiverr account day to day — gigs, buyer messages and orders?</p></div>
+       <div class="mc-why"><i class="hgi hgi-stroke hgi-information-circle ico" style="font-size:20px"></i><p>Fiverr account management is a named responsibility of this role.</p></div>
+       <footer class="mc-f"><button class="pa" data-at="130"><span class="pt"><i class="hgi hgi-stroke hgi-play ico" style="font-size:15px"></i></span>Play answer</button><span class="mc-time">Starts at 2:10</span></footer>
+      </article>
+     </section>
+
+     <!-- SLIDE 3: transcript -->
+     <section class="slide" role="tabpanel" aria-label="Transcript">
+      <label class="tsearch"><i class="hgi hgi-stroke hgi-search-01 ico" style="font-size:19px;"></i><span class="sr">Search what was said</span><input id="q" type="search" placeholder="Search what was said" autocomplete="off"><small id="qc"></small></label>
+      <div id="tlist"></div>
+     </section>
+    </div>
+   <div class="vfade" id="vfade" aria-hidden="true"></div>
+   </div>
+   <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+  </aside>
+ </div>
+</main>
+</div>
+
+<div class="dim" id="dim"></div>
+<aside class="drawer" id="drawer"><button class="back" id="dclose" aria-label="Close" style="float:right"><i class="hgi hgi-stroke hgi-cancel-01 ico"></i></button><h2 id="dt"></h2><p id="dp"></p><div id="dbody"></div></aside>
+<button class="fab" id="fab" aria-label="Ask Eligible"><span class="fi"><img src="eligible-icon.png" alt=""></span>Ask Eligible</button>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+let TOTAL=363;
+const Q=[
+ {n:1,t:"Walk me through how you decide which Upwork jobs to bid on.",tags:[["must","Must-have"],["part","Partly correct"]],fr:"1/5",pts:2.2,at:3,c:"#8fe3a8"},
+ {n:2,t:"Tell me about a proposal that actually got a reply. What did you write?",tags:[["part","Partly correct"]],fr:"2/5",pts:2.9,at:68,c:"#1b6ee8"},
+ {n:3,t:"How do you manage a Fiverr account day to day — gigs, buyer messages and orders?",tags:[["must","Must-have"],["part","Partly correct"]],fr:"1/5",pts:2.2,at:130,c:"#f1b7ee"},
+ {n:4,t:"A Fiverr buyer asks for extra work that isn't part of the gig. How do you handle it?",tags:[["part","Partly correct"]],fr:"1/5",pts:1.5,at:190,c:"#ffb68a"},
+ {n:5,t:"A client goes quiet after you send a proposal. What do you do next?",tags:[["na","Not answered"]],fr:"0/5",pts:0,at:250,c:"#d4d7e0"},
+ {n:6,t:"How would you pitch the same service differently to an Upwork client and a Fiverr buyer?",tags:[["na","Not answered"]],pts:0,c:"#d4d7e0"},
+ {n:7,t:"Tell me about a bid or deal you lost. What did you change afterwards?",tags:[["nice","Nice-to-have"],["na","Not answered"]],pts:0,c:"#d4d7e0"}
+];
+const T=[
+ {q:1,who:"I",k:"Question",s:3,int:1,x:"Hi Shakeel, I'm Maya, and I'll be conducting your interview today. This will take about twenty minutes and the call is recorded, so let's get started. Walk me through how you decide which Upwork jobs to bid on."},
+ {q:1,who:"C",s:13,x:"How about another one? Hey, Tulas, pass me. No, pass me the corner meter. Walk me through. Try that. Hello, I'm Thasind Rubhu and I currently work for MediaScore and I'm on their bidding team managing their Upwork and freelance profile."},
+ {q:1,who:"I",k:"Follow-up",s:33,x:"Thanks, Shakeel. So when you're on that bidding team, how do you personally decide which jobs are worth spending Connects on?"},
+ {q:1,who:"C",s:42,x:"Probably jobs that are more aligned to our portfolio. For example, let's say You have added those. These are all— these are all kind of— I cannot think of another way. They are helping me to get the interview done."},
+ {q:1,who:"I",k:"Follow-up",s:64,int:1,x:"Got it, so skill fit matters. Besides that, what else do you look at before deciding to spend Connects on a job?"},
+ {q:1,who:"C",s:65,x:"Okay, keep continuing."},
+ {q:2,who:"I",k:"Question",s:68,x:"Understood. Tell me about a proposal that actually got a reply. What did you write?"},
+ {q:2,who:"C",s:74,x:"Hi, so Well, so I remember about ecommerce project when I applied for the job. They asked me about regarding probably my previous portfolio, what I've worked on in our company. So I have written a proposal according to our, according to our current portfolio and proposed the letter or handed over the letter to them and they were pretty much impressed on the proposal. Like the proposal letter, they said the proposal letter is decent, but later they decided to accept that and yeah, we got the job."},
+ {q:2,who:"I",k:"Follow-up",s:110,int:1,x:"That's helpful. Can you tell me more specifically what you wrote in that proposal — how did you open it and what did you say about the client's project?"},
+ {q:2,who:"C",s:110,x:"Interview day, that's it."},
+ {q:2,who:"I",k:"Follow-up",s:113,int:1,x:"No problem. Just to understand your writing style — in that proposal, how did you tailor the first line or two to address what the client actually needed?"}
+];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+let t=0,playing=false,rate=1,timer,filter="all",term="",slide=0;
+
+/* slider */
+function go(i){
+ slide=Math.max(0,Math.min(2,i));setTimeout(()=>{if(typeof updMore==="function")updMore()},380);
+ $("#track").style.transform=`translateX(${-slide*100/3}%)`;
+ $("#ind").style.transform=`translateX(${slide*100}%)`;
+ $$("#segs button").forEach((b,k)=>b.setAttribute("aria-selected",k===slide));
+ $$("#dots i").forEach((d,k)=>d.classList.toggle("on",k===slide));
+ $$(".slide").forEach((s,k)=>{s.inert=k!==slide;s.setAttribute("aria-hidden",k!==slide)});
+}
+$$("#segs button").forEach(b=>b.onclick=()=>go(+b.dataset.i));
+$("#segs").onkeydown=e=>{if(e.key==="ArrowRight")go(slide+1);if(e.key==="ArrowLeft")go(slide-1)};
+let sx=null;const vw=$("#view");
+vw.addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+vw.addEventListener("touchend",e=>{if(sx==null)return;const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>60)go(slide+(d<0?1:-1));sx=null});
+
+/* question chips under video */
+function renderChips(){
+ let cur=1;Q.forEach(q=>{if(q.at!=null&&t>=q.at)cur=q.n});
+ $("#qchips").innerHTML=Q.map(q=>`<button class="qchip ${q.tags.some(x=>x[0]==='must')?'m':''}" data-n="${q.n}" aria-pressed="${q.n===cur}" ${q.at==null?'disabled style="opacity:.5;cursor:default"':''}><i></i>Q${q.n}${q.at!=null?` · ${fmt(q.at)}`:''}</button>`).join("");
+}
+$("#qchips").onclick=e=>{const b=e.target.closest(".qchip");if(b&&!b.disabled)seek(Q[+b.dataset.n-1].at,true)};
+
+/* answers */
+function renderA(){setTimeout(()=>{if(typeof updFade==="function")updFade()},0);
+ $("#alist").innerHTML=Q.filter(q=>filter==="all"||(filter==="must"&&q.tags.some(x=>x[0]==="must"))||(filter==="na"&&q.tags.some(x=>x[0]==="na"))).map(q=>{
+  const m=q.tags.some(x=>x[0]==="must"),na=q.tags.some(x=>x[0]==="na"),got=q.fr?+q.fr.split("/")[0]:0;
+  const meter=[0,1,2,3,4].map(i=>`<i class="${i<got?'on':''}"></i>`).join("");
+  return `<article class="acard ${m?'m':''} ${na?'na':''}" data-n="${q.n}">
+   <div class="ac-top"><span class="ac-n qc${q.n}">Q${q.n}</span>
+    <div class="ac-main"><h4>${q.t}</h4><div class="tags">${q.tags.map(x=>`<span class="tag t-${x[0]}">${x[1]}</span>`).join("")}</div></div></div>
+   <div class="ac-bot"><div class="ac-score"><div class="meter" aria-hidden="true">${meter}</div><span class="frac">${q.fr||"–/5"}</span></div>
+    <span class="sp"></span>
+    <span class="ac-pts ${q.pts?'':'z'}">${q.pts?'+'+q.pts.toFixed(1):'0'}<small>pts</small></span>
+    <button class="pl2 ${q.at==null?'off':''}" data-at="${q.at??''}" aria-label="Play answer to question ${q.n}" ${q.at==null?'tabindex="-1" disabled':''}><i class="hgi hgi-stroke hgi-play ico" style="font-size:16px"></i></button></div></article>`}).join("");
+}
+$("#alist").onclick=e=>{const b=e.target.closest(".pl2");if(b&&b.dataset.at!=="")seek(+b.dataset.at,true)};
+$$(".fl").forEach(b=>b.onclick=()=>{filter=b.dataset.f;$$(".fl").forEach(x=>x.setAttribute("aria-pressed",x===b));renderA()});
+$$(".pa").forEach(b=>b.onclick=()=>seek(+b.dataset.at,true));
+
+/* transcript */
+const LIMIT=6;let expanded=false;
+function renderT(){
+ const re=term?new RegExp("("+term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"):null;
+ const list=T.map((l,i)=>({l,i})).filter(o=>!re||o.l.x.match(re));
+ const collapsed=false;
+ const shown=collapsed?list.slice(0,LIMIT):list;
+ let h="",last=0;
+ shown.forEach(({l})=>{
+  if(l.q!==last){last=l.q;h+=`<div class="qh qc${l.q}"><b>Question ${l.q} of 7</b><span>${fmt(Q[l.q-1].at)}</span></div>`}
+  const c=l.who==='C',body=re?esc(l.x).replace(re,"<mark>$1</mark>"):esc(l.x);
+  h+=`<button class="msg ${c?'c':'i'}" data-s="${l.s}"><span class="mav"><img src="${c?'candidate.png':'eligible-icon.png'}" alt="${c?'Shakeel':'Eligible interviewer'}"></span><span class="mbody"><span class="mmeta"><b>${c?'Candidate':'Interviewer'}</b>${l.k?`<span class="kind">${l.k}</span>`:""}${l.int?'<span class="intr"><i class="hgi hgi-stroke hgi-alert-02 ico" style="font-size:13px"></i>Interrupted by the candidate</span>':""}<span class="tm"><i class="hgi hgi-stroke hgi-play ico" style="font-size:11px"></i>${fmt(l.s)}</span></span><span class="bub"><p>${body}</p></span></span></button>`});
+ $("#tlist").innerHTML=h||`<div class="empty">No lines match “${esc(term)}”.</div>`;
+ $("#qc").textContent=term?list.length+" match"+(list.length===1?"":"es"):"";hl();if(typeof updMore==="function")updMore();
+}
+$("#q").oninput=e=>{term=e.target.value.trim();renderT()};
+$("#tlist").onclick=e=>{
+ const l=e.target.closest(".msg");if(l)seek(+l.dataset.s,true)};
+const tslide=()=>$("#tlist").closest(".slide");
+function updMore(){const sl=tslide();const more=sl.scrollHeight>sl.clientHeight+12&&sl.scrollTop+sl.clientHeight<sl.scrollHeight-12;updFade()}
+function updFade(){const sl=document.querySelectorAll(".slide")[slide];const more=sl.scrollHeight>sl.clientHeight+12&&sl.scrollTop+sl.clientHeight<sl.scrollHeight-12;document.getElementById("vfade").classList.toggle("off",!more)}
+document.querySelectorAll(".slide").forEach(x=>x.addEventListener("scroll",updFade));
+function hl(){let cur=null;$$(".msg").forEach(l=>{l.classList.remove("active");if(+l.dataset.s<=t)cur=l});if(cur&&(t>0||playing))cur.classList.add("active");return cur}
+
+/* player */
+function ui(){
+ const p=t/TOTAL*100;$("#fill").style.width=p+"%";$("#th").style.left=p+"%";
+ $("#time").textContent=fmt(t)+" / "+fmt(TOTAL);$("#seek").setAttribute("aria-valuenow",Math.round(t));
+ let n=1;Q.forEach(q=>{if(q.at!=null&&t>=q.at)n=q.n});
+ $$("#qchips .qchip").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.n===n));
+ const c=hl();if(c&&playing&&slide===2){const box=c.closest(".slide");box.scrollTo({top:c.offsetTop-80,behavior:"smooth"})}
+}
+function setPlay(v){playing=v;if(v)ytStart();else ytPause();clearInterval(timer);$("#ppi").className="hgi hgi-stroke hgi-"+(v?"pause":"play")+" ico";$("#bigplay").style.display=v?"none":"grid";$("#pp").setAttribute("aria-label",v?"Pause":"Play");
+ if(v)timer=setInterval(()=>{if(ytReady){const c=yt.getCurrentTime();if(typeof c==="number")t=c;const d=yt.getDuration();if(d&&Math.abs(d-TOTAL)>.5)setTotal(d)}ui()},250)}
+function seek(s,play){t=Math.max(0,Math.min(TOTAL,s));if(ytReady)yt.seekTo(t,true);if(play)setPlay(true);ui();if(play)$("#stage").scrollIntoView({block:"nearest",behavior:"smooth"})}
+$("#pp").onclick=$("#bigplay").onclick=()=>setPlay(!playing);
+$("#stage").onclick=e=>{if(e.target===$("#stage"))setPlay(!playing)};
+const sk=$("#seek"),fx=e=>{const r=sk.getBoundingClientRect();return Math.max(0,Math.min(1,(e.clientX-r.left)/r.width))*TOTAL};let dr=false;
+sk.onpointerdown=e=>{dr=true;sk.setPointerCapture(e.pointerId);seek(fx(e))};sk.onpointermove=e=>{if(dr)seek(fx(e))};sk.onpointerup=()=>dr=false;
+sk.onkeydown=e=>{if(e.key==="ArrowRight")seek(t+5);if(e.key==="ArrowLeft")seek(t-5)};
+Q.forEach(q=>{if(q.at!=null){const m=document.createElement("i");m.className="mk";m.style.left=q.at/TOTAL*100+"%";sk.querySelector(".tr").appendChild(m)}});
+let mu=false;$("#mute").onclick=()=>{mu=!mu;if(ytReady){mu?yt.mute():yt.unMute()}$("#mute i").className="hgi hgi-stroke hgi-"+(mu?"volume-off":"volume-high")+" ico";$("#mute").setAttribute("aria-label",mu?"Unmute":"Mute")};
+$("#fs").onclick=()=>document.fullscreenElement?document.exitFullscreen():$("#stage").requestFullscreen&&$("#stage").requestFullscreen();
+$("#sp").onclick=e=>{e.stopPropagation();$("#pop").classList.toggle("open")};
+$("#pop").onclick=e=>{const b=e.target.closest("button");if(!b)return;rate=+b.dataset.s;if(ytReady)yt.setPlaybackRate(rate);$("#sp").textContent=rate+"x";$$("#pop button").forEach(x=>x.setAttribute("aria-checked",x===b));$("#pop").classList.remove("open")};
+document.addEventListener("click",()=>$("#pop").classList.remove("open"));
+
+function toast(m){const e=$("#toast");e.textContent=m;e.classList.add("show");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("show"),2200)}
+function drawer(h,p,items){$("#dt").innerHTML=h;$("#dp").textContent=p;$("#dbody").innerHTML=items.map(i=>`<div class="item"><i class="hgi hgi-stroke hgi-alert-02 ico"></i><div><b>${i[0]}</b><div>${i[1]}</div></div></div>`).join("");$("#drawer").classList.add("open");$("#dim").classList.add("open")}
+const closeD=()=>{$("#drawer").classList.remove("open");$("#dim").classList.remove("open")};
+$("#dim").onclick=$("#dclose").onclick=closeD;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeD();$("#side").classList.remove("open")}});
+$("#rescore").onclick=()=>toast("Rescoring queued");
+$("#why").onclick=()=>drawer("Why this score","The score combines answers, delivery and communication, minus integrity deductions of −40.",[["Answers · 8.8 / 55","Both must-haves only partially correct; Q5–Q7 unanswered."],["Delivery · 18 / 20","Delivery sub-score."],["Communication · 4.4 / 25","Written English remains unassessed."],["Integrity · −40","Seven flags, including another person in view."]]);
+const FLAGS=[["5:00",300,"2s+","20% 40%"],["4:37",277,"3s+","60% 30%"],["4:15",255,"25s+","30% 50%"],["3:03",183,"28s+","70% 40%"],["2:32",152,"3s+","40% 30%"],["1:19",79,"6s+","55% 60%"],["0:44",44,"2s+","35% 45%"]];
+const BEH=[["Looked left","6 times"],["Looked right","5 times"],["Looking away","11% of the time"],["Hand raised","21 times"],["Other voices on the mic","4 (3 besides the candidate)"],["Speech with lips still","19 times"],["Other people in view","282 s in all"],["Phone in view","1 s"]];
+function flagsDrawer(){
+ $("#dt").innerHTML="Behaviour &amp; flags";
+ $("#dp").textContent="7 integrity flags were raised. They are signals to review, not verdicts.";
+ $("#dbody").innerHTML=
+  `<div class="dsec">Integrity flags</div>`+
+  FLAGS.map((f,i)=>`<div class="dflag"><span class="dth" style="background-position:${f[3]}"></span><div><b><span class="hi">High</span>Another person in view</b><small>at ${f[0]} · lasted ${f[2]}${i===6?"<br>Candidate: they are helping me to get the interview done.":""}</small></div><button class="dwatch" data-t="${f[1]}"><i class="hgi hgi-stroke hgi-play ico" style="font-size:13px"></i>Watch</button></div>`).join("")+
+  `<div class="dsec" style="margin-top:22px">Behaviour</div><div class="dbeh">`+BEH.map(b=>`<div><small>${b[0]}</small><b>${b[1]}</b></div>`).join("")+`</div>`+
+  `<a class="dall" href="details.html">See everything on the Full details page <i class="hgi hgi-stroke hgi-arrow-right-02 ico" style="font-size:18px"></i></a>`;
+ $("#drawer").classList.add("open");$("#dim").classList.add("open");
+}
+$("#flagsbtn").onclick=flagsDrawer;
+$("#dbody").addEventListener("click",e=>{const b=e.target.closest(".dwatch");if(b){closeD();seek(+b.dataset.t,true)}});
+$("#menu").onclick=()=>$("#side").classList.toggle("open");
+$("#soon").onclick=()=>toast("More features are on the way");
+$("#aibtn").onclick=e=>{e.stopPropagation();const o=$(".aitip").classList.toggle("open");$("#aibtn").setAttribute("aria-expanded",o)};
+document.addEventListener("click",()=>{$(".aitip").classList.remove("open");$("#aibtn").setAttribute("aria-expanded","false")});
+
+/* YouTube video, no YouTube UI; our controls drive it */
+const YT_ID="7VmNi2ppZSc";
+let yt=null,ytReady=false,ytWant=false;
+function onYouTubeIframeAPIReady(){
+ yt=new YT.Player("ytplayer",{videoId:YT_ID,host:"https://www.youtube-nocookie.com",
+  playerVars:{controls:0,disablekb:1,fs:0,modestbranding:1,rel:0,iv_load_policy:3,cc_load_policy:0,playsinline:1},
+  events:{
+   onReady:()=>{ytReady=true;const d=yt.getDuration();if(d)setTotal(d);const tp=+new URLSearchParams(location.search).get("t");if(tp>0){seek(tp,true)}else if(ytWant)ytStart()},
+   onError:()=>{$("#ytwrap").classList.remove("on");if(playing)setPlay(false);toast(location.protocol==="file:"?"Open this page from a web address (not a file) to play the clip":"This video can't be played here")},
+   onStateChange:e=>{if(e.data===YT.PlayerState.ENDED){$("#ytwrap").classList.remove("on");if(playing)setPlay(false);t=0;ui()}}
+  }});
+}
+function ytStart(){
+ if(!ytReady){ytWant=true;return}
+ ytWant=false;
+ if(yt.getPlayerState()===YT.PlayerState.ENDED)yt.seekTo(0,true);
+ yt.playVideo();
+ $("#ytwrap").classList.add("on");
+}
+function setTotal(d){TOTAL=d;$("#seek").setAttribute("aria-valuemax",Math.round(d));ui()}
+function ytPause(){ytWant=false;if(ytReady&&yt.getPlayerState()===YT.PlayerState.PLAYING)yt.pauseVideo()}
+(function(){const sc=document.createElement("script");sc.src="https://www.youtube.com/iframe_api";document.head.appendChild(sc)})();
+renderChips();renderA();renderT();go(0);ui();tslide().addEventListener("scroll",updMore);window.addEventListener("resize",updMore);setTimeout(updMore,50);
+</script>
+<script src="shell.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
