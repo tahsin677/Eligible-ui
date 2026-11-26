@@ -71,7 +71,7 @@ const L0=[{n:"Shakeel",r:"Sales Executive",s:"Finished",sc:0,w:"26 Nov, 19:14"}]
 function draw(){
  const j=$("#fj").value,s=$("#fi").value;
  const L=L0.filter(x=>(!j||x.r===j)&&(!s||x.s===s));
- $("#rows").innerHTML=L.length?L.map(x=>`<a class="t-row" href="index.html"><div class="who"><img src="candidate.png" alt=""><div><b>${esc(x.n)}</b></div></div><span><span class="role-chip">${esc(x.r)}</span></span><span><span class="st fin"><i></i>${x.s}</span></span>
+ $("#rows").innerHTML=L.length?L.map(x=>`<a class="t-row" href="interview.html"><div class="who"><img src="candidate.png" alt=""><div><b>${esc(x.n)}</b></div></div><span><span class="role-chip">${esc(x.r)}</span></span><span><span class="st fin"><i></i>${x.s}</span></span>
  <div><div class="scorecell"><b>${x.sc}</b><span class="sbar"><i style="width:${x.sc}%"></i></span></div><div class="subline"><span class="st red">Must-haves 0/2</span><span class="st red">Don't advance</span><span class="st amb">High cheating risk</span></div></div><small style="color:var(--mute);font-size:14px">${x.w}</small></a>`).join(""):`<div class="t-empty">No interviews match these filters.</div>`;
 }
 ["#fj","#fi"].forEach(s=>$(s).addEventListener("input",draw));

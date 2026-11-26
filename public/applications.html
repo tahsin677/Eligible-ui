@@ -92,7 +92,7 @@ function draw(){
   const inner=`<div class="who"><img src="${a.p}" alt="${esc(a.n)}"><div><b>${esc(a.n)}</b><small>${esc(a.e)}</small></div></div><span><span class="role-chip">${esc(a.r)}</span></span>
   <div>${a.s===null?`<small style="color:var(--faint);font-size:13.5px">Not interviewed yet</small>`:`<div class="scorecell"><b>${a.s}</b><span class="sbar"><i style="width:${a.s}%;background:${col(a.s)}"></i></span></div><small class="${a.s<40?"sub-red":""}" style="font-size:13px;color:${a.s<40?"":"var(--mute)"}">Must-haves ${a.m}</small>`}</div>
   <span><span class="st ${SC[a.st]}"><i></i>${a.st}</span></span><small style="color:var(--mute);font-size:14px">${a.d}</small>`;
-  return a.real?`<a class="t-row" href="index.html">${inner}</a>`:`<div class="t-row hov" data-demo="${esc(a.n)}" tabindex="0" role="button">${inner}</div>`}).join(""):`<div class="t-empty">No applicants match these filters.</div>`;
+  return a.real?`<a class="t-row" href="interview.html">${inner}</a>`:`<div class="t-row hov" data-demo="${esc(a.n)}" tabindex="0" role="button">${inner}</div>`}).join(""):`<div class="t-empty">No applicants match these filters.</div>`;
  $("#cnt").textContent=L.length+" applicant"+(L.length===1?"":"s");
 }
 $("#rows").addEventListener("click",e=>{const r=e.target.closest("[data-demo]");if(r)toast(r.dataset.demo+"'s interview isn't part of this demo")});

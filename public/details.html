@@ -245,11 +245,11 @@ a.hc:hover,a.hc:focus-visible{transform:scale(1.18);box-shadow:0 0 0 2px #fff,0 
  <div class="hd">
   <button class="back mob" id="menu" aria-label="Menu"><i class="hgi hgi-stroke hgi-menu-01 ico"></i></button>
   <div class="t">
-   <a class="back" href="index.html" aria-label="Back to the interview"><i class="hgi hgi-stroke hgi-arrow-left-02 ico"></i></a>
+   <a class="back" href="interview.html" aria-label="Back to the interview"><i class="hgi hgi-stroke hgi-arrow-left-02 ico"></i></a>
    <div><h1>Shakeel: full details</h1></div>
   </div>
   <div class="sp"></div>
-  <a class="gbtn" href="index.html"><i class="hgi hgi-stroke hgi-video-01 ico" style="font-size:18px"></i><span class="lbl">Back to the interview</span></a>
+  <a class="gbtn" href="interview.html"><i class="hgi hgi-stroke hgi-video-01 ico" style="font-size:18px"></i><span class="lbl">Back to the interview</span></a>
   <button class="pbtn"><span class="pl"><i class="hgi hgi-stroke hgi-plus-sign ico" style="font-size:18px"></i></span>New job</button>
  </div>
 
@@ -319,7 +319,7 @@ const DEDUCT=[
  {t:"Looked away from the screen",p:-6,r:"Looked away 11 times (6 left, 5 right); the first 5 are free.",at:36}
 ];
 const grp=(name,total,cls)=>`<div class="gh"><span>${name}</span><b class="${cls}">${total}</b></div>`;
-const row=(o,watch)=>`<div class="rrow">${pts(o.p)}<div class="rt"><h4>${o.n?`Q${o.n}: `:""}${E(o.t)}${o.of!=null?`<small>of ${o.of}</small>`:""}</h4><p>${o.r}</p></div>${watch?`<div class="rw"><a href="index.html?t=${o.at}">${ico("play",13)}Watch</a></div>`:`<span></span>`}</div>`;
+const row=(o,watch)=>`<div class="rrow">${pts(o.p)}<div class="rt"><h4>${o.n?`Q${o.n}: `:""}${E(o.t)}${o.of!=null?`<small>of ${o.of}</small>`:""}</h4><p>${o.r}</p></div>${watch?`<div class="rw"><a href="interview.html?t=${o.at}">${ico("play",13)}Watch</a></div>`:`<span></span>`}</div>`;
 function slider(segsSel,trackSel,n){
  let c=0;const bs=[...document.querySelectorAll(segsSel+" button")],pn=[...document.querySelectorAll(trackSel+" > section")],tr=$(trackSel),vw=tr.parentElement;
  const go=i=>{c=Math.max(0,Math.min(n-1,i));tr.style.transform=`translateX(${-c*100/n}%)`;bs.forEach((b,k)=>b.setAttribute("aria-selected",k===c));pn.forEach((p,k)=>{p.inert=k!==c;p.setAttribute("aria-hidden",k!==c)});bs[c].scrollIntoView({inline:"nearest",block:"nearest",behavior:"smooth"})};
@@ -370,7 +370,7 @@ function heat(){
    for(let k=0;k<NB;k++){const o=Math.min(en,(k+1)*bl)-Math.max(st,k*bl);if(o>0)cov[k]+=o}});
   const n=L.l.match(/\((\d+)\)/)[1];
   const cells=cov.map((c,k)=>{const v=lvl(c),r=`${fm(k*bl)}–${fm((k+1)*bl)}`,msg=`${r} · ${name}: ${v?word[v]+" ("+Math.round(c)+" s of "+Math.round(bl)+" s)":"none"}`;
-   return v?`<a class="hc l${v}" href="index.html?t=${Math.round(k*bl)}" title="${msg}" aria-label="${msg}. Watch"></a>`:`<span class="hc l0" title="${msg}"></span>`}).join("");
+   return v?`<a class="hc l${v}" href="interview.html?t=${Math.round(k*bl)}" title="${msg}" aria-label="${msg}. Watch"></a>`:`<span class="hc l0" title="${msg}"></span>`}).join("");
   return `<div class="hrow"><span class="hl">${name}<b>${n}</b></span><div class="hcells">${cells}</div></div>`;
  };
  const axis=[0,1,2,3,4,5,6].map(m=>`<span style="left:${(m*60/LEN*100).toFixed(2)}%">${m}:00</span>`).join("");
@@ -401,7 +401,7 @@ $("#voiceBody").innerHTML=`<div class="camrow"><div class="r"><small>Other voice
 
 /* ---- Integrity flags ---- */
 const FL=[["5:00","2s+",300,"20% 40%"],["4:37","3s+",277,"60% 30%"],["4:15","25s+",255,"30% 50%"],["3:03","28s+",183,"70% 40%"],["2:32","3s+",152,"40% 30%"],["1:19","6s+",79,"55% 60%"],["0:44","2s+",44,"35% 45%"]];
-$("#flagBody").innerHTML=FL.map((f,i)=>`<div class="fl2"><div class="fth" style="background-image:url('candidate-video.jpg');background-position:${f[3]};background-size:220%"></div><div><h4><span class="hi">High</span>Another person in view</h4><p>at ${f[0]} · lasted ${f[1]}${i===6?`<span class="quote">${ico("bubble-chat",15)}Candidate: they are helping me to get the interview done.</span>`:""}</p></div><a class="go" href="index.html?t=${f[2]}">${ico("play",13)}Watch</a></div>`).join("")+`<div class="foot2">Left fullscreen 0× · switched away 0×</div>`;
+$("#flagBody").innerHTML=FL.map((f,i)=>`<div class="fl2"><div class="fth" style="background-image:url('candidate-video.jpg');background-position:${f[3]};background-size:220%"></div><div><h4><span class="hi">High</span>Another person in view</h4><p>at ${f[0]} · lasted ${f[1]}${i===6?`<span class="quote">${ico("bubble-chat",15)}Candidate: they are helping me to get the interview done.</span>`:""}</p></div><a class="go" href="interview.html?t=${f[2]}">${ico("play",13)}Watch</a></div>`).join("")+`<div class="foot2">Left fullscreen 0× · switched away 0×</div>`;
 
 /* ---- Session ---- */
 $("#sessBody").innerHTML=[["Started","26/11/2026, 19:14:46"],["Finished","26/11/2026, 19:20:53"],["Length","6 min"],["Recording","1 part"],["Transcript","27 lines"],["Interview language","English (India)"],["Snapshots","7"]].map(r=>`<div class="tile"><small>${r[0]}</small><b style="font-size:18px">${r[1]}</b></div>`).join("");

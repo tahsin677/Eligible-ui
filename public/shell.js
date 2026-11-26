@@ -53,7 +53,7 @@
    {g:"Pages",t:"Billing",i:"credit-card",h:"#",k:"plan invoices payment"},
    {g:"Pages",t:"Settings",i:"setting-07",h:"settings.html",k:"preferences account"},
    {g:"Pages",t:"Audit logs",i:"audit-01",h:"#",k:"history activity"},
-   {g:"This interview",t:"Shakeel · Interview recording",i:"video-01",h:"index.html",k:"watch video candidate sales executive"},
+   {g:"This interview",t:"Shakeel · Interview recording",i:"video-01",h:"interview.html",k:"watch video candidate sales executive"},
    {g:"This interview",t:"Full details",i:"file-01",h:"details.html",k:"score answers speech behaviour flags session"},
    {g:"This interview",t:"Why this score",i:"information-circle",h:"details.html",k:"points deductions breakdown"},
    {g:"This interview",t:"Integrity flags",i:"flag-01",h:"details.html",k:"cheating another person camera voices"}
