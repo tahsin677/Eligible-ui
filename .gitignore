@@ -1,2 +1,5 @@
 /.wrangler/
 
+cloudflare.config.ts
+wrangler.config.ts
+
