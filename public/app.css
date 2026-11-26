@@ -633,3 +633,5 @@ i.ico{width:auto!important;height:auto!important;font-size:20px;line-height:1;di
 
 /* workspace switcher without a logo tile */
 .ws{padding:10px 14px}
+
+.ws .av{width:40px;height:40px;padding:0;border:0;background:var(--grad);color:#fff;font:500 18px var(--head);display:grid;place-items:center;border-radius:12px}
